@@ -1,0 +1,27 @@
+.kpi-container {
+    @apply flex flex-col pb-8 pl-4 mr-2 w-1/4 hover:cursor-pointer;
+}
+.kpi-container.selected {
+    @apply border-2 border-solid border-accent border-x-0 border-t-0 ;
+}
+.kpi-title {
+    @apply flex flex-row items-center;
+}
+.kpi-title-text {
+    @apply font-bold text-lg opacity-50;
+}
+.kpi-title-percent {
+    @apply flex items-center justify-center rounded-full ml-2 font-bold text-sm bg-green-400 bg-opacity-50 text-green-300 p-2 text-center h-5;
+}
+.kpi-value {
+    @apply text-3xl font-black my-4; 
+}
+.kpi-previous {
+    @apply text-secondary font-bold;
+}
+.table-header {
+    @apply mr-8 text-secondary font-bold p-2 rounded-md w-24 text-center hover:cursor-pointer hover:bg-secondary hover:bg-opacity-20 transition-all;
+}
+.table-header.active {
+    @apply bg-secondary bg-opacity-30 text-white;
+}

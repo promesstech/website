@@ -1,0 +1,27 @@
+.search {
+    @apply px-4 py-2 rounded-md mx-2 bg-secondary font-bold w-2/5 text-white bg-opacity-50;
+}
+.role.c-role {
+    @apply bg-blue-10;
+}
+.role.vice {
+    @apply bg-blue-8;
+}
+.role.manager {
+    @apply bg-blue-6;
+}
+.role.staff {
+    @apply bg-blue-4;
+}
+.role.beginner {
+    @apply bg-blue-2;
+}
+.role.gues {
+    @apply bg-blue-1;
+}
+.menu .item {
+    @apply px-2 py-1 my-0.5 rounded-md font-bold hover:bg-secondary;
+}
+.menu .item.danger {
+    @apply text-red-400 hover:bg-red-400 hover:text-white;
+}

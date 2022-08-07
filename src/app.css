@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700;900&family=Pacifico&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+	@apply bg-white dark:bg-primary;
+}
+html, body {
+	overflow-x: hidden;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+	scrollbar-color: #6B7480 #101216;
+	scrollbar-width: thick;
+	scroll-behavior: smooth;
+	color: white;
+}
+*::-webkit-scrollbar {
+    width: 6px;
+}
+*::-webkit-scrollbar-track {
+	background-color: #101216;
+}
+ 
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #6B7480;
+}
+*::-webkit-scrollbar-corner{
+	background-color: #101216;
+}
+a {
+	text-decoration: none;
+}
+input:focus {
+	outline: none;
+}
+textarea:focus {
+	border: none;
+	outline: none;
+}
+.no-arrow {
+	-webkit-appearance: none;
+}

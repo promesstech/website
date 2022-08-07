@@ -1,0 +1,23 @@
+.message {
+    @apply  hover:bg-opacity-50 py-1;
+}
+/* hover:bg-dark-primary */
+.message:hover .time {
+    @apply text-opacity-100;
+}
+.message-container .content {
+    color: #C3C3C3;
+    @apply font-medium text-sm;
+}
+.message-input {
+    max-height: 300px;
+    resize: none;
+    height: auto;
+}
+.date-divider hr {
+    @apply w-full bg-black opacity-30;
+    height: 1px;
+}
+.chat-container {
+    flex-flow: column;
+}
