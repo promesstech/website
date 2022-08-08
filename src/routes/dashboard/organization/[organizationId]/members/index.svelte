@@ -44,7 +44,7 @@
             role: [ "Manager", "Employee" ],
             avatar: {
                 id: "av_4",
-                url: "/images/assets/avatar-3.png",
+                url: "/images/assets/avatar-3.jpg",
             },
             team: "Operations",
         },
@@ -66,7 +66,7 @@
             role: [ "Intern" ],
             avatar: {
                 id: "av_6",
-                url: "/images/assets/avatar-4.png",
+                url: "/images/assets/avatar-4.jpg",
             },
             team: "Operations",
         },
