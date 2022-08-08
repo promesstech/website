@@ -1,7 +1,6 @@
 .message {
-    @apply  hover:bg-opacity-50 py-1;
+    @apply hover:bg-opacity-50 py-1 hover:bg-dark-primary;
 }
-/* hover:bg-dark-primary */
 .message:hover .time {
     @apply text-opacity-100;
 }
