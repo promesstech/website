@@ -1,4 +1,5 @@
 <script>
+    import { goto } from "$app/navigation";
     import Logo from "../components/Logo.svelte";
     import "../styles/index.css";
 
@@ -68,7 +69,7 @@
                 <a class="nav-link" href="/">Resources</a>
             </div>
             <div class="login flex flex-row w-96">
-                <a class="border-2 border-solid border-accent text-accent" href="/login">Login</a>
+                <a class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all" href="/login">Login</a>
                 <a class="bg-accent" href="/signup">Start for free</a>
             </div>
         </div>
@@ -84,18 +85,22 @@
                     <img src="/icons/underline.svg" alt="underline" class="w-28"/>
                 </div>
             </div>
-            <div class="flex flex-row mt-24">
+            <form
+                class="flex flex-row mt-24"
+                on:submit|preventDefault={() => {
+                    goto(`/accounts/signup?email=${email}`);
+                    email = "";
+                }}
+            >
                 <input
                     type="text"
                     class="font-bold bg-dark-secondary rounded-md p-4 w-84"
                     placeholder="Email address"
-                    on:input={e => {
-                        // @ts-ignore
-                        email = e.target?.value;
-                    }}
+                    bind:value={email}
+                    
                 />
-                <a href="/signup?email={email}" class="flex items-center justify-center bg-accent font-bold ml-4 rounded-md w-40">Sign Up</a>
-            </div>
+                <a href="/accounts/signup?email={email}" class="flex items-center justify-center bg-accent font-bold ml-4 rounded-md w-40">Sign Up</a>
+            </form>
         </div>
     </div>
     <div class="flex flex-row items-center bg-secondary bg-opacity-10 w-screen h-screen mb-32">
