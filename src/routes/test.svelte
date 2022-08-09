@@ -10,10 +10,11 @@
 
     let blocks: { [id: string]: Block };
     $: blocks = {
-        "block_22345678": { type: "h1", content: `<span class="font-bold text-3xl">This is a large heading</span>` },
-        "block_32345678": { type: "h2", content: `<span class="font-bold text-2xl">This is a medium heading</span>` },
-        "block_42345678": { type: "h3", content: `<span class="font-bold text-xl">This is a small heading</span>` },
-        "block_12345678": { type: "text", content: `<span class="font-bold text-sm">This is some text</span>`  },
+        "block_22345678": { type: "h1", content: `This is a large heading` },
+        "block_32345678": { type: "h2", content: `This is a medium heading` },
+        "block_42345678": { type: "h3", content: `This is a small heading` },
+        "block_12345678": { type: "text", content: `This is some text`  },
+        "block_52345678": { type: "text", content: ``  },
     };
 
     onMount(() => {
@@ -26,111 +27,176 @@
             const block = blocks[id];
             if (!block) return;
 
-            const style = {
-                "h1": "text-3xl",
-                "h2": "text-2xl",
-                "h3": "text-xl",
-                "text": "text-sm",
-            };
-
-            // @ts-ignore
-            const innerText = e.target.innerText;
-
-            block.content = `<span class="font-bold ${style[block.type]}">${innerText || ""}</span>`;
-
             blocks = {
                 ...blocks,
                 [id]: block
             };
         });
     });
+
+    const blockStyles = {
+        "h1": "font-bold text-3xl",
+        "h2": "font-bold text-2xl",
+        "h3": "font-bold text-xl",
+        "text": "text-sm",
+    };
+
+    $: activeCommandBlockId = "block_52345678";
 </script>
 
 <div class="py-16 px-32 flex flex-col h-screen">
     <span class="font-bold text-xl mt-8">Notion</span>
     <div class="mt-8">
         {#each Object.entries(blocks) as [id, block], i}
-            <div
-                contenteditable
-                class="focus:border-none focus:outline-none my-1 bg-opacity-10 p-1 bg-black"
-                bind:innerHTML={blocks[id].content}
-                on:keydown={e => {
-                    const makeNewBlock = () => {
-                        const newBlockId = `block_${Math.random()}`;
-                        blocks = {
-                            ...blocks,
-                            [newBlockId]: {
-                                type: "text",
-                                content: "",
-                            },
-                        };
-
-                        setTimeout(() => {
-                            // move the caret to the start of the new block
-                            const newBlock = document.getElementById(newBlockId);
-                            if (!newBlock) return;
-                            
-                            newBlock.focus();
-                        }, 1);
-
-                    };
-
-                    if (e.key === "Enter") {
-                        e.preventDefault();
-                        if (!e.target) return;
-
-                        const selection = window.getSelection();
-                        if (!selection) return;
-
-                        const block = blocks[id];
-
-                        const blockHtml = document.getElementById(id);
-                        if (!blockHtml) return;
-
-                        // whether the caret is at the end of the block
-                        // used to determine whether to make a new block
-                        const isEndOfBlock = selection.type == "Caret" && selection?.focusOffset === blockHtml.innerText.length;
-        
-                        if (isEndOfBlock) makeNewBlock();
-                    } else if (e.key === "ArrowUp") {
-                        const lastBlockId = Object.keys(blocks)[i - 1];
-                        const lastBlock = document.getElementById(lastBlockId);
-                        if (!lastBlock) return;
-
-                        lastBlock?.focus();
-                    } else if (e.key === "ArrowDown") {
-                        if (i >= Object.keys(blocks).length - 1) return;
-                        const nextBlockId = Object.keys(blocks)[i + 1];
-                        const nextBlock = document.getElementById(nextBlockId);
-
-                        if (!nextBlock) makeNewBlock();
-                        else nextBlock?.focus();
-                    } else if (e.key === "Backspace") {
-                        // @ts-ignore
-                        if (blocks[id].content.length === 0) {
-                            e.preventDefault();
-                            
-                            const newBlocks = {};
-
-                            Object.entries(blocks).forEach(([blockId, block]) => {
-                                // @ts-ignore
-                                if (blockId !== id) newBlocks[blockId] = block;
-                            });
-
-                            blocks = newBlocks;
-
+            <div class="relative">
+                {#if activeCommandBlockId === id}
+                    <div class="absolute flex flex-col bottom-8 bg-dark-secondary p-4 rounded-md w-4xx">
+                        <div class="slash-command">
+                            <img
+                                src="/icons/dashboard/h.svg"
+                                alt="h1"
+                                class="icon"
+                            />
+                            <span class="title">Heading 1</span>
+                        </div>
+                        <div class="slash-command">
+                            <img
+                                src="/icons/dashboard/h.svg"
+                                alt="h2"
+                                class="icon"
+                            />
+                            <span class="title">Heading 2</span>
+                        </div>
+                        <div class="slash-command">
+                            <img
+                                src="/icons/dashboard/h.svg"
+                                alt="h3"
+                                class="icon"
+                            />
+                            <span class="title">Heading 3</span>
+                        </div>
+                    </div>
+                {/if}
+                <div
+                    contenteditable
+                    class="focus:border-none focus:outline-none my-1 bg-opacity-10 p-1 relative {blockStyles[block.type]}"
+                    bind:textContent={blocks[id].content}
+                    on:keydown={e => {
+                        const makeNewBlock = () => {
+                            const newBlockId = `block_${Math.random()}`;
+                            blocks = {
+                                ...blocks,
+                                [newBlockId]: {
+                                    type: "text",
+                                    content: "",
+                                },
+                            };
+    
                             setTimeout(() => {
                                 // move the caret to the start of the new block
-                                const newBlock = document.getElementById(Object.keys(newBlocks)[Object.values(newBlocks).length - 1]);
+                                const newBlock = document.getElementById(newBlockId);
                                 if (!newBlock) return;
                                 
                                 newBlock.focus();
-                            }, 10);
+                            }, 1);
+    
                         };
-                    };
-                }}
-                {id}
-            ></div>
+    
+                        const selection = window.getSelection();
+    
+                        if (e.key === "Enter") {
+                            activeCommandBlockId = "";
+                            e.preventDefault();
+                            if (!e.target) return;
+                            if (!selection) return;
+    
+                            const blockHtml = document.getElementById(id);
+                            if (!blockHtml) return;
+    
+                            // whether the caret is at the end of the block
+                            // used to determine whether to make a new block
+                            const isEndOfBlock = selection.type == "Caret" && selection?.focusOffset === blockHtml.innerText.length;
+            
+                            if (isEndOfBlock) makeNewBlock();
+                        } else if (e.key === "ArrowUp") {
+                            activeCommandBlockId = "";
+                            const lastBlockId = Object.keys(blocks)[i - 1];
+                            const lastBlock = document.getElementById(lastBlockId);
+                            if (!lastBlock) return;
+    
+                            lastBlock?.focus();
+                        } else if (e.key === "ArrowDown") {
+                            activeCommandBlockId = "";
+                            if (i >= Object.keys(blocks).length - 1) return;
+                            const nextBlockId = Object.keys(blocks)[i + 1];
+                            const nextBlock = document.getElementById(nextBlockId);
+    
+                            if (!nextBlock) makeNewBlock();
+                            else nextBlock?.focus();
+                        } else if (e.key === "Backspace") {
+                                    activeCommandBlockId = "";
+                            if (!selection) return;
+                            // @ts-ignore
+                            if (blocks[id].content.length === 0 || selection.focusOffset === 0) {
+                                e.preventDefault();
+                                
+                                const blockContent = blocks[id].content;
+                                
+                                const newBlocks = {};
+    
+                                Object.entries(blocks).forEach(([blockId, block]) => {
+                                    // @ts-ignore
+                                    if (blockId !== id) newBlocks[blockId] = block;
+                                });
+    
+                                blocks = newBlocks;
+    
+                                setTimeout(() => {
+                                    // move the caret to the start of the new block
+                                    const newBlock = document.getElementById(Object.keys(newBlocks)[Object.values(newBlocks).length - 1]);
+                                    if (!newBlock) return;
+                                    
+                                    newBlock.focus();
+    
+                                    const [lastBlockId, lastBlock] = Object.entries(blocks)[i - 1];
+                                    if (!lastBlock) return;
+    
+                                    blocks = {
+                                        ...blocks,
+                                        [lastBlockId]: {
+                                            type: lastBlock.type,
+                                            content: `${lastBlock.content}${blockContent}`,
+                                        },
+                                    };
+                                }, 10);
+    
+                            };
+                        } else if (e.key === "/") {
+                            activeCommandBlockId = id;
+                        } else if (e.key === "Enter" && activeCommandBlockId === id) {
+                            e.preventDefault();
+                            activeCommandBlockId = "";
+
+                            // do some command action
+                        } else if (e.key === " ") {
+                            activeCommandBlockId = "";
+                        };
+                    }}
+                    {id}
+                ></div>
+            </div>
         {/each}
     </div>
 </div>
+
+<style lang="postcss">
+    .slash-command {
+        @apply flex flex-row items-center p-2 rounded-md hover:cursor-pointer hover:bg-secondary hover:bg-opacity-20;
+    }
+    .slash-command .icon {
+        @apply border border-solid border-secondary rounded-sm;
+    }
+    .slash-command .title {
+        @apply font-bold ml-2;
+    }
+</style>

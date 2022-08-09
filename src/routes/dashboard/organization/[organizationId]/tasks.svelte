@@ -20,7 +20,7 @@
             assignees: [ member ],
             createdAt: Date.now(),
             createdBy: member,
-            description: "Fix mobile responsiveness for documentation",
+            description: "Fix mobile responsiveness on login page",
             dueDate: Date.now(),
             id: "task_1",
             priority: "low",
