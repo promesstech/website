@@ -1,0 +1,9 @@
+.slash-command {
+    @apply flex flex-row items-center p-2 rounded-md hover:cursor-pointer;
+}
+.slash-command .icon {
+    @apply border border-solid border-secondary rounded-sm;
+}
+.slash-command .title {
+    @apply font-bold ml-2;
+}
