@@ -1,0 +1,6 @@
+.sidebar-title {
+    @apply font-black ml-2 my-4 text-lg;
+}
+.sidebar-link {
+    @apply font-bold text-gray-400 my-0.5 py-1 px-2 w-full rounded-md hover:bg-light-secondary hover:text-white transition-all;
+}
