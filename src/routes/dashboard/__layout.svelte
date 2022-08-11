@@ -45,7 +45,7 @@
 
 <div class="flex flex-row w-screen max-h-screen overflow-y-hidden z-40">
     <div class="sidebar-container">
-        <div class="relative">
+        <div class="relative w-full">
             <div
                 class="h-20 w-full overflow-clip border border-solid border-dark-primary border-x-0 border-t-0 flex flex-row items-center px-4 hover:cursor-pointer"
                 on:click={() => accountsDropdown = !accountsDropdown}

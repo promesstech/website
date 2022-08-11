@@ -5,6 +5,7 @@
     import { organizationStore } from "../../../../stores/organization";
     import { formatDate } from "../../../../utils/dates";
     import DateInput from "../../../../components/date/DateInput.svelte";
+    import Document from "../../../../components/Document.svelte";
 
     const member: Member = {
         avatar: $userStore.avatar,
@@ -174,12 +175,14 @@
                 </span>
             </div>
             <div class="flex flex-row w-full h-full">
-                <div class="flex flex-col w-2/3 p-12 px-16 border border-solid border-y-0 border-l-0 border-secondary">
-                    <textarea
-                        class="bg-inherit text-3xl font-bold mb-8 p-2 border border-very-dark-primary border-solid hover:border-secondary focus:border-secondary"
+                <div class="flex flex-col overflow-y-scroll w-2/3 p-12 px-16 border border-solid border-y-0 border-l-0 border-secondary">
+                    <input
+                        class="bg-inherit text-3xl font-bold mb-4 p-2 pl-3 rounded-md border border-solid border-secondary"
                         value={selectedTask.description}
                     />
-                    <span class="font-bold text-sm text-secondary">Type '/' for commands</span>
+                    <div class="document-container p-2 border-solid border-secondary rounded-md">
+                        <Document />
+                    </div>
                 </div>
                 <div class="flex flex-col w-1/3 h-full">
                     <div class="flex flex-col h-full">
@@ -320,7 +323,7 @@
                                     />
                                     <span class="text-lg text-secondary font-bold ml-4">Project</span>
                                 </div>
-                                <select class="no-arrow font-bold bg-inherit {!selectedTask.project.id && "text-center"} hover:cursor-pointer">
+                                <select class="no-arrow font-bold bg-inherit {!selectedTask.project && "text-center"} hover:cursor-pointer">
                                     {#each $organizationStore.projects as project}
                                         <option value="" selected>Select a project</option>
                                         <option value={project.id} selected={project.id === selectedTask.project.id}>{project.name}</option>
@@ -476,5 +479,8 @@
     }
     .mutable .priority.done {
         @apply bg-green-400;
+    }
+    .document-container {
+        min-height: 400px;
     }
 </style>

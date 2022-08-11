@@ -13,7 +13,7 @@
     {#each days as day, i}
         {@const isNextMonth = i - 1 + offset > monthLength}
         {@const isPreviousMonth = i < offset}
-        {@const isSelected = i + 1 - offset === 7}
+        {@const isSelected = i + 1 - offset === today.getDate()}
         <div class="w-full flex flex-col h-full items-center pt-4 font-bold border border-solid border-opacity-10 border-secondary">
             {#if i < 7}
                 <span class="text-secondary">{daysOfWeek[i].substring(0, 3)}</span>
