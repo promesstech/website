@@ -13,6 +13,10 @@
 .kpi-title-percent {
     @apply flex items-center justify-center rounded-full ml-2 font-bold text-sm bg-green-400 bg-opacity-50 text-green-300 p-2 text-center h-5;
 }
+
+.kpi-title-percent.negative {
+    @apply bg-red-400 bg-opacity-50 text-red-300;
+}
 .kpi-value {
     @apply text-3xl font-black my-4; 
 }
