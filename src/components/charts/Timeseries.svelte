@@ -16,7 +16,7 @@
     let lastHoveredX: number | undefined;
     $: lastHoveredX = undefined;
 
-    const dateEnd = new Date(endDate.getTime() + 24 * 60 * 60 * 1000);
+    const dateEnd = new Date(endDate.getTime());
     const dateStart = new Date(dateEnd.setUTCHours(0, 0, 0, 0) - 24 * 60 * 60 * 1000 * data.length);
  
     $: date = (dateEnd.getTime() - dateStart.getTime()) / data.length * (lastHoveredX || 0);

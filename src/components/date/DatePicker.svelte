@@ -72,7 +72,7 @@
     };
 </script>
 
-<div class="date-container flex flex-col w-3xx rounded-md p-4">
+<div class="date-container flex flex-col w-3xx rounded-md p-4 z-10">
     <div class="flex flex-row w-full justify-between py-2 font-bold items-center">
         <img
             src="/icons/left-arrow.svg"

@@ -67,7 +67,7 @@ import type { stringify } from "postcss";
     };
 </script>
 
-<div class="w-full h-full">
+<div class="w-full h-full z-0">
     {#each Object.entries(blocks) as [id, block], i}
         <div class="relative">
             {#if activeCommandBlockId === id}

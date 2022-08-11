@@ -12,7 +12,7 @@
     $: date = undefined;
 </script>
 
-<div class="relative">
+<div class="relative z-40">
     <span
         class="hover:cursor-pointer font-bold ml-1 text-tiny"
         on:click={() => active = !active}
