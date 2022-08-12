@@ -15,8 +15,8 @@
 >
     <div class="bg-very-dark-primary h-6xx w-fit rounded-b-md flex flex-row">
         {#if activeModal === "event"}
-            <div class="flex flex-row w-full h-full ">
-                <div class="flex flex-col w-4xx p-12">
+            <div class="flex flex-row w-full h-full">
+                <div class="flex flex-col w-5xx p-12">
                     <div class="flex flex-row items-center">
                         <div class="w-6 h-6 rounded-md bg-blue-1"></div>
                         <span class="ml-4 font-bold">Untitled Event</span>
@@ -55,7 +55,7 @@
                         <Document />
                     </div>
                     <div>
-                        <span class="w-full h-10 flex items-center justify-center font-bold bg-accent rounded-md hover:cursor-pointer">Create Event</span>
+                        <span class="w-full h-10 flex items-center justify-center font-bold bg-accent rounded-md hover:cursor-pointer mt-4">Create Event</span>
                     </div>
                 </div>
             </div>
@@ -67,9 +67,12 @@
     <div class="flex flex-col w-full h-full">
         <div class="flex flex-row items-center justify-end h-20 py-8 px-16 border border-solid border-dark-primary border-x-0 border-t-0">
             <select class="p-2 border-2 border-solid border-secondary bg-inherit rounded-md w-28">
-                <option value="month">Month</option>
-                <option value="month">Week</option>
-                <option value="month">Day</option>
+                <option value="schedule">Schedule</option>
+                <option value="year">Year</option>
+                <option value="month" selected>Month</option>
+                <option value="week">Week</option>
+                <option value="3day">3 Day</option>
+                <option value="day">Day</option>
             </select>
         </div>
         <slot />
