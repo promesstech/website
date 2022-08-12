@@ -1,5 +1,5 @@
 .sidebar-container {
-    @apply h-screen bg-primary flex flex-col border border-solid border-dark-primary border-y-0 border-l-0 pr-4;
+    @apply h-screen bg-primary flex flex-col border border-solid border-dark-primary border-y-0 border-l-0;
     min-width: 250px;
 }
 .nav-link {
