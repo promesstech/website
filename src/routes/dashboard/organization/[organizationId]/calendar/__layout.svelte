@@ -51,6 +51,9 @@
                             <DateInput showTime={false}/>
                         </div>
                     </div>
+                    <div>
+                        Time with an all day option
+                    </div>
                     <div class="document mt-8 z-0">
                         <Document />
                     </div>
@@ -82,12 +85,6 @@
         <div class="flex flex-col w-full">
             <span
                 class="add-button bg-accent"
-                on:click={() => activeModal = "reminder"}
-            >
-                + Add Reminder
-            </span>
-            <span
-                class="add-button bg-blue-6"
                 on:click={() => activeModal = "event"}
             >
                 + Add Event

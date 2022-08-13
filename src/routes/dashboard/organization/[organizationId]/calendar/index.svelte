@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import { getWeeksOfMonth, daysOfWeek } from "../../../../../utils/dates";
 
     const today = new Date();
@@ -9,23 +10,35 @@
         offset,
     } = getWeeksOfMonth(today, 6);
 </script>
-<div class="w-full h-full grid grid-cols-7 grid-rows-6">
+<div
+    class="w-full h-full grid grid-cols-7 grid-rows-6"
+    id="calendar-container"
+>
     {#each days as day, i}
         {@const isNextMonth = i - 1 + offset > monthLength}
         {@const isPreviousMonth = i < offset}
         {@const isSelected = i + 1 - offset === today.getDate()}
-        <div class="w-full flex flex-col h-full items-center pt-4 font-bold border border-solid border-opacity-10 border-secondary">
+        <div class="w-full flex flex-col items-center pt-4 font-bold border border-solid border-opacity-10 border-secondary">
             {#if i < 7}
                 <span class="text-secondary">{daysOfWeek[i].substring(0, 3)}</span>
             {/if}
             <span class="flex items-center justify-center rounded-full p-2 h-8 w-8 {isSelected && "bg-accent"} {(isNextMonth || isPreviousMonth) && "text-secondary text-opacity-50"}">{day}</span>
             <div class="flex flex-col overflow-y-scroll w-full">
-                <div class="flex flex-col w-full mt-2 pr-2">
+                <div class="flex flex-col w-full pr-2">
                     {#if i === 15}
-                        <span class="flex items-center rounded-md bg-blue-2 text-xs font-bold px-2 h-6 truncate mb-2 hover:cursor-pointer">Product Release</span>
+                        <span class="event bg-blue-2">Product Release</span>
+                    {/if}
+                    {#if i === 15}
+                        <span class="event bg-blue-2">Product Release</span>
+                    {/if}
+                    {#if i === 15}
+                        <span class="event bg-blue-2">Product Release</span>
+                    {/if}
+                    {#if i === 15}
+                        <span class="event bg-blue-2">Product Release</span>
                     {/if}
                     {#if i === 23}
-                        <span class="flex items-center rounded-md bg-blue-4 text-xs font-bold px-2 h-6 truncate mb-2 hover:cursor-pointer">New product showcase</span>
+                        <span class="event bg-blue-4">New product showcase</span>
                     {/if}
                 </div>
                 <div class="flex flex-col pl-2">

@@ -1,3 +1,9 @@
 .add-button {
     @apply rounded-md text-center p-2 font-bold mt-2 hover:cursor-pointer;
 }
+.event {
+    @apply flex items-center rounded text-tiny font-bold px-2 h-5 truncate mb-0.5 hover:cursor-pointer;
+}
+.reminder {
+
+}
