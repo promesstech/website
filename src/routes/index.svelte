@@ -110,7 +110,7 @@
             class="h-full"
         />
         <div class="w-1/2 flex flex-col pr-32">
-            <span class="text-4xl font-bold">Projectize brings together all your project management needs into one app</span>
+            <span class="text-4xl font-bold">Promess brings together all your project management needs into one app</span>
             <span class="text-xl text-secondary my-16">All of your work in one place: Tasks, files, chat, roadmaps and more</span>
             <a
                 href="/signup"
@@ -120,7 +120,7 @@
             </a>
         </div>
     </div>
-    <div>
+    <div class="flex flex-row items-center h-screen">
         some other content
     </div>
 </div>

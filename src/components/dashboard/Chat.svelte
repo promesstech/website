@@ -40,39 +40,6 @@
     $: files;
 
     $: if(files?.length > 0) handleFileUpload(files);
-
-    // let i = 0;
-
-    // const endMessage = "Yep, all good here!";
-
-    // const autoType = () => {
-    //     if (i < endMessage.length) {
-    //         content += endMessage[i];
-    //         i++;
-    //         setTimeout(autoType, 50);
-    //     } else {
-    //         const oscar = {
-    //             id: "user_2",
-    //             name: "Oscar",
-    //             email: "oscar@gmail.com",
-    //             avatar: {
-    //                 id: "av_1234567890123456",
-    //                 url: "https://avatars.dicebear.com/api/avataaars/fa.svg?translateY=-2&style=circle",
-    //             },
-    //         };
-
-    //         addMessage({
-    //             author: oscar,
-    //             authorId: oscar.id,
-    //             channelId: "channel_korpyyvg4a0jjq39",
-    //             content: endMessage,
-    //             createdAt: Date.now(),
-    //             id: `msg_${i}234567890123456`,
-    //         });
-
-    //         content = "";
-    //     };
-    // };
 </script>
 
 <div class="chat-container w-full flex justify-between h-screen">
@@ -114,7 +81,6 @@
                     maxRows={16}
                     on:submit={sendMessage}
                 />
-                <!-- on:focus={autoType} -->
             </form>
         </div>
     </div>

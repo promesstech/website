@@ -1,5 +1,5 @@
 <a href="/">
-    <span class="logo text-3xl h-full flex items-center p-3">projectize</span>
+    <span class="logo text-3xl h-full flex items-center p-3">promess</span>
 </a>
 <style>
     .logo {

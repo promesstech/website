@@ -13,6 +13,7 @@ export interface User {
 export interface Role {
     id: string;
     name: string;
+    level: "c-role" | "vice" | "manager" | "staff" | "beginner";
 };
 
 export interface Team {
@@ -25,12 +26,20 @@ export interface Project {
     name: string;
 };
 
+interface ExtendedUser {
+    roles: Role[];
+    team: Team;
+};
+
+export interface Member extends User, ExtendedUser {};
+
 export interface Organization {
     id: string;
     name: string;
-    members: (User & { role: Role })[];
+    members: Member[];
     teams: Team[];
     projects: Project[];
+    roles: Role[];
 };
 
 export interface Channel {
@@ -46,15 +55,6 @@ export interface Message {
     channelId: string;
     createdAt: number;
     author: User;
-};
-
-export interface Member {
-    id: string;
-    name: string;
-    email: string;
-    role: ("Owner" | "Founder" | "CTO" | "Manager" | "Director" | "Employee" | "Intern")[];
-    avatar: Avatar;
-    team: string;
 };
 
 export interface Task {

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { onMount } from "svelte";
     import { getWeeksOfMonth, daysOfWeek } from "../../../../../utils/dates";
 
     const today = new Date();

@@ -57,8 +57,8 @@
                     class="h-8 w-8 rounded-md"
                 />
                 <div class="flex flex-col w-32 h-12 overflow-clip ml-4 justify-center">
-                    <span class="truncate font-black text-xs">Project Manager</span>
-                    <span class="text-xs font-bold text-secondary truncate">oscar@gmail.com</span>
+                    <span class="truncate font-black text-xs">Promess</span>
+                    <span class="text-xs font-bold text-secondary truncate">oscarf@gmail.com</span>
                 </div>
                 <img
                     src="/icons/navbar/dropdown.svg"

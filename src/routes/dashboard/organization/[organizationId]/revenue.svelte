@@ -58,12 +58,12 @@
         { id: "pay_IgKqqHTpAKlILnY1", amount: 2000, status: "Succeeded", customerId: "cus_T62BbPtf1ioHoEgW", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(17, 43, 12, 512), },
         { id: "pay_gopndZxa5KoYpCsf", amount: 2000, status: "Succeeded", customerId: "cus_asJHbyjZd3lY3HV8", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(17, 12, 12, 512), },
         { id: "pay_YvwmsKqsbueq4ebC", amount: 2000, status: "Succeeded", customerId: "cus_Q4L0dWBiLcynkvx2", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 58, 12, 512), },
-        { id: "pay_jrzFtH4eXn80eQ8R", amount: 2000, status: "Succeeded", customerId: "cus_9FdEWZaiU22L3poZ", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 56, 12, 512), },
-        { id: "pay_3lbyoeKyoQp5HDJs", amount: 2000, status: "Succeeded", customerId: "cus_ulERaFNUe8eJP7V7", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 24, 12, 512), },
-        { id: "pay_3J4AoOfCfsqmu7E4", amount: 2000, status: "Succeeded", customerId: "cus_VWjj8iuTfWGEACH0", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 18, 12, 512), },
-        { id: "pay_8ueKI1zczCpVrzIv", amount: 2000, status: "Succeeded", customerId: "cus_MktUPhTLQeVyoUb9", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 2, 12, 512), },
-        { id: "pay_TIcyCWssiFsAn8OI", amount: 2000, status: "Succeeded", customerId: "cus_FRZaHM8Cw6XcufpG", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(15, 45, 12, 512), },
-        { id: "pay_XFwZxqWZ8Kt3LoUk", amount: 2000, status: "Succeeded", customerId: "cus_zFiUufj0s1emXCk0", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(15, 32, 12, 512), },
+        // { id: "pay_jrzFtH4eXn80eQ8R", amount: 2000, status: "Succeeded", customerId: "cus_9FdEWZaiU22L3poZ", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 56, 12, 512), },
+        // { id: "pay_3lbyoeKyoQp5HDJs", amount: 2000, status: "Succeeded", customerId: "cus_ulERaFNUe8eJP7V7", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 24, 12, 512), },
+        // { id: "pay_3J4AoOfCfsqmu7E4", amount: 2000, status: "Succeeded", customerId: "cus_VWjj8iuTfWGEACH0", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 18, 12, 512), },
+        // { id: "pay_8ueKI1zczCpVrzIv", amount: 2000, status: "Succeeded", customerId: "cus_MktUPhTLQeVyoUb9", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(16, 2, 12, 512), },
+        // { id: "pay_TIcyCWssiFsAn8OI", amount: 2000, status: "Succeeded", customerId: "cus_FRZaHM8Cw6XcufpG", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(15, 45, 12, 512), },
+        // { id: "pay_XFwZxqWZ8Kt3LoUk", amount: 2000, status: "Succeeded", customerId: "cus_zFiUufj0s1emXCk0", description: "Project manager premium", date: new Date("2022-08-11").setUTCHours(15, 32, 12, 512), },
     ];
 
     let activeModal: "customer" | "payment" | "recepit" | "invoice" | "";
