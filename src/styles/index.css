@@ -12,8 +12,9 @@
     width: fit;
 }
 .feature-grid .feature {
-    @apply flex flex-col w-full border-solid border-secondary px-8 py-12 hover:cursor-pointer;
+    @apply flex flex-col w-full border-solid border-secondary px-8 py-12 hover:cursor-pointer sm:border-0 sm:border-b sm:px-0;
 }
 .example-image {
-    @apply rounded-xl w-5/6 absolute -right-1/2 lg:w-2/3 lg:h-auto lg:mt-16 lg:sticky;
+    @apply rounded-xl absolute -right-1/2 lg:w-2/3 lg:h-auto lg:mt-16 lg:sticky sm:hidden;
+    width: 85%;
 }

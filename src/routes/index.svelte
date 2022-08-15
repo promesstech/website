@@ -88,13 +88,13 @@
 
     const featureFlyTransition = {
         duration: 300,
-        x: document.body.clientWidth > 1100 ? 700 : 100,
+        x: document.body.clientWidth > 1100 ? 700 : -200,
     };
 </script>
 
 <div class="flex flex-col w-full min-h-screen bg-black">
     <div class="flex flex-col h-screen">
-        <div class="flex flex-row p-8 w-full items-center xs:py-16">
+        <div class="flex flex-row p-8 w-full items-center">
             <div class="w-96 mb-4">
                 <Logo />
             </div>
@@ -117,7 +117,7 @@
                 />
             </div>
         </div>
-        <div class="flex flex-col items-center h-full justify-center">
+        <div class="flex flex-col items-center h-full justify-center xs:py-16">
             <span class="text-4xl font-black text-center md:text-3xl px-4">Mission control for your software business</span>
             <div class="flex flex-row text-2xl mt-12 font-bold md:text-xl">
                 <span class="text-secondary">Manage your</span>
@@ -157,9 +157,9 @@
         <img
             src="/icons/features/blob.svg"
             alt="blob"
-            class="absolute w-1/2 left-1/2 -translate-x-1/2 z-0 lg:top-1xx"
+            class="absolute w-1/2 left-1/2 -translate-x-1/2 z-0 lg:top-1xx md:top-2xx sm:hidden"
         />
-        <div class="feature-grid grid grid-cols-2 w-1/2 z-10 lg:w-full">
+        <div class="feature-grid grid grid-cols-2 w-1/2 z-10 lg:w-full sm:grid-cols-1 sm:w-screen sm:px-8">
             {#each features as featureElement, i}
             {@const borders = featureBorders[i]}
                 <div
