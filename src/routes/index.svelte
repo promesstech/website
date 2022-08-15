@@ -3,6 +3,7 @@
     import { goto } from "$app/navigation";
     import Logo from "../components/Logo.svelte";
     import "../styles/index.css";
+import { onMount } from "svelte";
 
     $: email = "";
 
@@ -86,10 +87,17 @@
 
     $: menuIsActive = false;
 
-    const featureFlyTransition = {
+    $: featureFlyTransition = {
         duration: 300,
-        x: document.body.clientWidth > 1100 ? 700 : -200,
+        x: -200,
     };
+
+    onMount(() => {
+        featureFlyTransition = {
+            duration: 300,
+            x: document.body.clientWidth > 1100 ? 700 : -200,
+        };
+    });
 </script>
 
 <div class="flex flex-col w-full min-h-screen bg-black">
