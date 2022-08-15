@@ -11,3 +11,9 @@
     color: transparent;
     width: fit;
 }
+.feature-grid .feature {
+    @apply flex flex-col w-full border-solid border-secondary px-8 py-12 hover:cursor-pointer;
+}
+.example-image {
+    @apply rounded-xl w-5/6 absolute -right-1/2 lg:w-2/3 lg:h-auto lg:mt-16 lg:sticky;
+}

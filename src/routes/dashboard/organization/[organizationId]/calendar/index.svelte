@@ -25,6 +25,9 @@
             <div class="flex flex-col overflow-y-scroll w-full">
                 <div class="flex flex-col w-full pr-2">
                     {#if i === 15}
+                        <span class="event bg-blue-2 mt-2">Product Release</span>
+                    {/if}
+                    <!-- {#if i === 15}
                         <span class="event bg-blue-2">Product Release</span>
                     {/if}
                     {#if i === 15}
@@ -32,24 +35,21 @@
                     {/if}
                     {#if i === 15}
                         <span class="event bg-blue-2">Product Release</span>
-                    {/if}
-                    {#if i === 15}
-                        <span class="event bg-blue-2">Product Release</span>
-                    {/if}
+                    {/if} -->
                     {#if i === 23}
                         <span class="event bg-blue-4">New product showcase</span>
                     {/if}
                 </div>
                 <div class="flex flex-col pl-2">
                     {#if i === 19}
-                        <div class="flex flex-row items-start w-fit hover:cursor-pointer">
+                        <div class="flex flex-row items-start w-fit hover:cursor-pointer mt-2">
                             <span class="w-4 h-4 rounded-md bg-blue-6"></span>
                             <span class="text-xs ml-1 text-secondary text-opacity-50 font-bold">12:00am</span>
                             <span class="custom-scrollbar ml-1 font-bold text-xs w-fit truncate">Team meeting</span>
                         </div>
                     {/if}
                     {#if i === 23}
-                        <div class="flex flex-row items-start w-fit hover:cursor-pointer">
+                        <div class="flex flex-row items-start w-fit hover:cursor-pointer mt-2">
                             <span class="w-4 h-4 rounded-md bg-blue-8"></span>
                             <span class="text-xs ml-1 text-secondary text-opacity-50 font-bold">2:00pm</span>
                             <span class="custom-scrollbar ml-1 font-bold text-xs w-fit truncate">Team evaluation</span>
