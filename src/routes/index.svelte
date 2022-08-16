@@ -154,12 +154,16 @@ import { onMount } from "svelte";
             </form>
         </div>
     </div>
-    <div class="w-screen bg-very-dark-secondary bg-opacity-20">
+    <div class="w-screen bg-very-dark-secondary bg-opacity-20 flex flex-col items-center">
         <img
-            src="/images/assets/example2.svg"
+            src="/images/assets/example3.svg"
             alt="gradient"
-            class="z-0"
+            class="main-example-image"
         />
+    </div>
+    <div class="w-screen flex flex-col items-center pt-48 pb-24 px-1/12 text-center">
+        <span class="text-5xl font-black md:text-3xl 2xs:text-2xl">Promess brings together all your project management needs into one app </span>
+        <span class="text-secondary font-bold text-2xl mt-8 md:text-lg 2xs:text-base">All of your work in one place: Tasks, files, chat, roadmaps and more</span>
     </div>
     <div class="flex flex-row items-center min-h-screen px-16 relative lg:flex-col py-32 sm:py-8">
         <img
@@ -218,4 +222,7 @@ import { onMount } from "svelte";
             />
         {/if}
     </div>
+    <span>Logo cloud</span>
+    <span>Newletter signup</span>
+    <span>Footer</span>
 </div>
