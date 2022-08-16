@@ -102,7 +102,7 @@ import { onMount } from "svelte";
 
 <div class="flex flex-col w-full min-h-screen bg-black">
     <div class="flex flex-col h-screen">
-        <div class="flex flex-row p-8 w-full items-center">
+        <div class="flex flex-row p-8 w-full items-center xs:py-0 xs:pt-4">
             <div class="w-96 mb-4">
                 <Logo />
             </div>
@@ -154,14 +154,14 @@ import { onMount } from "svelte";
             </form>
         </div>
     </div>
-    <div class="w-screen min-h-screen bg-very-dark-secondary bg-opacity-10">
+    <div class="w-screen bg-very-dark-secondary bg-opacity-20">
         <img
-            src="/images/assets/example.svg"
+            src="/images/assets/example2.svg"
             alt="gradient"
             class="z-0"
         />
     </div>
-    <div class="flex flex-row items-center min-h-screen px-16 relative lg:flex-col py-32">
+    <div class="flex flex-row items-center min-h-screen px-16 relative lg:flex-col py-32 sm:py-8">
         <img
             src="/icons/features/blob.svg"
             alt="blob"
