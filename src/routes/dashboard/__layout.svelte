@@ -42,7 +42,7 @@
 
     $: accounts = [ $userStore ];
 
-    const dev = false;
+    const dev = import.meta.env.DEV;
 </script>
 
 {#if dev}
