@@ -18,3 +18,25 @@
     @apply rounded-xl absolute -right-1/2 lg:w-2/3 lg:h-auto lg:mt-16 lg:sticky sm:hidden;
     width: 85%;
 }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.integrations .icon-container {
+    @apply relative m-6 w-8 h-8 lg:mx-12 sm:mx-6;
+}
+.integrations .icon {
+    @apply rounded-md hover:cursor-pointer;
+}
+.integrations .integration-name {
+    @apply absolute hidden font-bold bg-secondary p-1 px-2 w-fit rounded-md left-1/2 -translate-x-1/2 -top-8 text-xs whitespace-nowrap;
+    animation: fadeOut 0.4s;
+}
+.integrations .icon-container:hover .integration-name {
+    @apply flex;
+    animation: fadeIn 0.4s;
+}
