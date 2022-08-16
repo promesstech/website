@@ -223,7 +223,7 @@
             />
         {/if}
     </div>
-    <div class="integrations flex flex-row my-48 py-24 bg-secondary bg-opacity-10 items-center justify-between px-1/12 lg:flex-col">
+    <div class="integrations flex flex-row my-32 py-24 bg-secondary bg-opacity-10 items-center justify-between px-1/12 lg:flex-col">
         <div class="flex flex-col w-1/2 lg:items-center lg:text-center lg:w-2/3 sm:w-full">
             <span class="text-4xl font-bold">Will it work with my other tools?</span>
             <span class="text-lg font-bold text-secondary my-12">Promess integrates with various services to bring together data from your favourite external services to display in a clean UI.</span>
@@ -235,6 +235,15 @@
             </a>
         </div>
         <div class="grid grid-cols-5 lg:mt-16 xs:grid-cols-3">
+            <Integration main name="Stripe"><img class="icon" src="/images/integrations/stripe.jpg" alt="stripe" /></Integration>
+            <Integration main name="Google Calendar"><img class="icon" src="/images/integrations/google-calendar.png" alt="google-calendar" /></Integration>
+            <Integration main name="Google Drive"><img class="icon" src="/images/integrations/google-drive.png" alt="google-drive" /></Integration>
+            <Integration main name="Dropbox"><img class="icon" src="/images/integrations/dropbox.png" alt="dropbox" /></Integration>
+            <Integration main name="Notion"><img class="icon" src="/images/integrations/notion.svg" alt="notion" /></Integration>
+            <Integration main name="Zapier"><img class="icon" src="/images/integrations/zapier.svg" alt="zapier" /></Integration>
+            <Integration main name="Slack"><img class="icon" src="/images/integrations/slack.webp" alt="slack" /></Integration>
+            <Integration main name="Airtable"><img class="icon" src="/images/integrations/airtable.png" alt="airtable" /></Integration>
+            <Integration main name="Calendly"><img class="icon" src="/images/integrations/calendly.png" alt="calendly" /></Integration>
             <Integration name="Facebook"><img class="icon" src="/images/integrations/facebook.webp" alt="facebook" /></Integration>
             <Integration name="Github"><img class="icon" src="/images/integrations/github.webp" alt="github" /></Integration>
             <Integration name="Instagram"><img class="icon" src="/images/integrations/instagram.webp" alt="instagram" /></Integration>
@@ -242,18 +251,9 @@
             <Integration name="Reddit"><img class="icon" src="/images/integrations/reddit.png" alt="reddit" /></Integration>
             <Integration name="YouTube"><img class="icon" src="/images/integrations/youtube.png" alt="youtube" /></Integration>
             <Integration name="Pinterest"><img class="icon" src="/images/integrations/pinterest.svg" alt="pinterest" /></Integration>
-            <Integration name="Slack"><img class="icon" src="/images/integrations/slack.webp" alt="slack" /></Integration>
-            <Integration name="Airtable"><img class="icon" src="/images/integrations/airtable.png" alt="airtable" /></Integration>
-            <Integration name="Zapier"><img class="icon" src="/images/integrations/zapier.svg" alt="zapier" /></Integration>
-            <Integration name="Notion"><img class="icon" src="/images/integrations/notion.svg" alt="notion" /></Integration>
-            <Integration name="Stripe"><img class="icon" src="/images/integrations/stripe.jpg" alt="stripe" /></Integration>
             <Integration name="Paddle"><img class="icon" src="/images/integrations/paddle.webp" alt="paddle" /></Integration>
             <Integration name="Plaid"><img class="icon" src="/images/integrations/plaid.svg" alt="plaid" /></Integration>
             <Integration name="Square"><img class="icon" src="/images/integrations/square.png" alt="square" /></Integration>
-            <Integration name="Google Calendar"><img class="icon" src="/images/integrations/google-calendar.png" alt="google-calendar" /></Integration>
-            <Integration name="Calendly"><img class="icon" src="/images/integrations/calendly.png" alt="calendly" /></Integration>
-            <Integration name="Google Drive"><img class="icon" src="/images/integrations/google-drive.png" alt="google-drive" /></Integration>
-            <Integration name="Dropbox"><img class="icon" src="/images/integrations/dropbox.png" alt="dropbox" /></Integration>
             <Integration name="Google Analytics"><img class="icon" src="/images/integrations/google-analytics.svg" alt="google-analytics" /></Integration>
             <Integration name="Plausible"><img class="icon" src="/images/integrations/plausible.svg" alt="plausible" /></Integration>
             <Integration name="Netlify"><img class="icon" src="/images/integrations/netlify.png" alt="netlify" /></Integration>
