@@ -4,6 +4,7 @@
     import { goto } from "$app/navigation";
     import Integration from "../components/Integration.svelte";
     import Logo from "../components/Logo.svelte";
+    import Footer from "../components/footer/Footer.svelte";
     import "../styles/index.css";
 
     $: email = "";
@@ -141,8 +142,9 @@
             <form
                 class="flex flex-row mt-24 tiny:flex-col"
                 on:submit|preventDefault={() => {
-                    goto(`/accounts/signup?email=${email}`);
-                    email = "";
+                    // goto(`/accounts/signup?email=${email}`);
+                    // email = "";
+                    goto("#newsletter")
                 }}
             >
                 <input
@@ -151,17 +153,18 @@
                     placeholder="Email address"
                     bind:value={email}
                 />
-                <a href="/accounts/signup?email={email}" class="flex items-center justify-center bg-accent font-bold ml-4 rounded-md w-40 sm:w-32 2xs:w-24 2xs:text-xs tiny:w-full tiny:mt-2 tiny:ml-0 tiny:h-8">Sign Up</a>
+                <!-- href="/accounts/signup?email={email}" -->
+                <a href="#newsletter" class="flex items-center justify-center bg-accent font-bold ml-4 rounded-md w-40 sm:w-32 2xs:w-24 2xs:text-xs tiny:w-full tiny:mt-2 tiny:ml-0 tiny:h-8">Sign Up</a>
             </form>
         </div>
     </div>
     <div class="w-screen bg-very-dark-secondary bg-opacity-20 flex flex-col items-center">
-        <img src="/images/assets/example-desktop.svg" alt="gradient" class="main-example-image xs:hidden"/>
-        <img src="/images/assets/example-mobile.svg" alt="gradient" class="main-example-image hidden xs:flex"/>
+        <img src="/images/assets/example-desktop.svg" alt="main-example-desktop" class="main-example-image xs:hidden"/>
+        <img src="/images/assets/example-mobile.svg" alt="main-example-mobile" class="main-example-image hidden xs:flex"/>
     </div>
     <div class="w-screen flex flex-col items-center pt-48 pb-24 px-1/12 text-center">
-        <span class="text-5xl font-black md:text-3xl 2xs:text-2xl">Promess brings together all your project management needs into one app </span>
-        <span class="text-secondary font-bold text-2xl mt-8 md:text-lg 2xs:text-base">All of your work in one place: Tasks, files, chat, roadmaps and more</span>
+        <span class="text-5xl font-black md:text-3xl 2xs:text-2xl">Promess brings together all your project management needs into one dashboard</span>
+        <span class="text-secondary font-bold text-2xl mt-8 md:text-lg 2xs:text-base">All of your work in one place: Tasks, files, chat, calendar, revenue and more.</span>
     </div>
     <div class="flex flex-row items-center min-h-screen px-16 relative lg:flex-col py-32 sm:py-8">
         <img
@@ -259,6 +262,67 @@
             <Integration name="Prometheus"><img class="icon" src="/images/integrations/prometheus.png" alt="prometheus" /></Integration>
         </div>
     </div>
-    <div>Newletter signup</div>
-    <div>Footer</div>
+    <div class="tech-features-container flex flex-col pt-32">
+        <img src="/images/WaveTop.svg" alt="wave-bottom" />
+        <div class="flex flex-col items-center bg-secondary bg-opacity-10 pb-12 pt-24 md:px-4">
+            <span class="text-4xl font-bold text-center 2xs:text-3xl">Manage your tech</span>
+            <span class="font-bold text-secondary mt-4 text-center 2xs:text-xs">With promess you can administer and monitor the tech side of your business.</span>
+            <div class="grid grid-cols-3 w-12xx mt-8 2lg:w-5/6 md:w-full md:grid-cols-2 2xs:grid-cols-1">
+                <div class="tech-feature">
+                    <img src="/icons/features/tech/server.svg" alt="infrastructure" class="icon"/>
+                    <span class="title">View your infrastructure</span>
+                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
+                </div>
+                <div class="tech-feature">
+                    <img src="/icons/features/tech/analytics.svg" alt="analytics" class="icon"/>
+                    <span class="title">Track your analytics</span>
+                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
+                </div>
+                <div class="tech-feature">
+                    <img src="/icons/features/tech/metrics.svg" alt="metrics" class="icon"/>
+                    <span class="title">Measure your metrics</span>
+                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
+                </div>
+                <div class="tech-feature">
+                    <img src="/icons/features/tech/database.svg" alt="database" class="icon"/>
+                    <span class="title">Administer your database</span>
+                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
+                </div>
+                <div class="tech-feature">
+                    <img src="/icons/features/tech/logs.svg" alt="logs" class="icon"/>
+                    <span class="title">Manage your logs</span>
+                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
+                </div>
+                <div class="tech-feature">
+                    <img src="/icons/features/tech/uptime.svg" alt="uptime" class="icon"/>
+                    <span class="title">Monitor your applications</span>
+                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
+                </div>
+            </div>
+        </div>
+        <img src="/images/WaveBottom.svg" alt="wave-bottom" />
+    </div>
+    <div class="flex flex-col w-full items-center py-48 mb-24 lg:py-32 lg:mb-12 2xs:mb-0">
+        <div class="flex flex-col w-1/2 items-center text-center md:w-full md:px-8">
+            <span class="font-black text-5xl md:text-4xl">Promess is still in development</span>
+            <span class="text-secondary my-8 font-bold">Subscribe to our newsletter to get weekly updates and get notified when we go into beta.</span>
+            <div class="flex flex-row w-5xx 2xs:w-5/6 xs:flex-col">
+                <input
+                    placeholder="Your email"
+                    type="text"
+                    class="rounded-l-md bg-inherit border border-solid border-secondary p-3 border-r-0 font-bold w-full md:py-2 md:text-sm xs:border-r xs:rounded-r-md"
+                    id="newsletter"
+                />
+                <a
+                    class="bg-accent rounded-r-md px-4 font-bold flex items-center justify-center w-48 2xs:text-sm md:w-32 xs:w-full xs:rounded-l-md xs:mt-4 xs:h-8"
+                    href="/newsletter"
+                >
+                    Subscribe
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="mt-16 bg-secondary bg-opacity-10 2xs:mt-8">
+        <Footer />
+    </div>
 </div>

@@ -40,3 +40,15 @@
     @apply flex;
     animation: fadeIn 0.4s;
 }
+.tech-features-container .tech-feature {
+    @apply flex flex-col m-8;
+}
+.tech-features-container .tech-feature .icon {
+    @apply w-8 h-8;
+}
+.tech-features-container .tech-feature .title {
+    @apply font-bold text-2xl my-2;
+}
+.tech-features-container .tech-feature .description {
+    @apply font-bold text-sm text-secondary;
+}
