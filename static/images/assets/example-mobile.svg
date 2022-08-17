@@ -1,18 +1,17 @@
-<svg width="1920" height="2053" viewBox="0 0 1920 2053" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect y="421" width="1920" height="1215" fill="#050606"/>
+<svg width="1920" height="2023" viewBox="0 0 1920 2023" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect y="384" width="1920" height="1222" fill="#050606"/>
 <g filter="url(#filter0_f_166_11)">
-<rect x="104" y="512" width="1712" height="1029" fill="url(#paint0_linear_166_11)" fill-opacity="0.2"/>
+<rect x="104" y="512" width="1712" height="999" fill="url(#paint0_linear_166_11)" fill-opacity="0.2"/>
 </g>
-<rect x="238" y="579" width="1444" height="816" rx="16" fill="url(#pattern0)"/>
-<line y1="1637.5" x2="1920" y2="1637.5" stroke="#6366F1"/>
-<line y1="420.5" x2="1920" y2="420.5" stroke="#6366F1"/>
-<line y1="511.5" x2="1920" y2="511.5" stroke="#6366F1"/>
-<line y1="1443.5" x2="1920" y2="1443.5" stroke="#6366F1"/>
-<line y1="1540.5" x2="1920" y2="1540.5" stroke="#6366F1"/>
-<line x1="1816.5" y1="512" x2="1816.5" y2="1636" stroke="#6366F1"/>
-<line x1="104.5" y1="512" x2="104.5" y2="1636" stroke="#6366F1"/>
+<rect x="97" y="490" width="1723" height="980" rx="16" fill="url(#pattern0)"/>
+<line y1="1607.5" x2="1920" y2="1607.5" stroke="#6366F1"/>
+<line y1="383.5" x2="1920" y2="383.5" stroke="#6366F1"/>
+<line y1="488.5" x2="1920" y2="488.5" stroke="#6366F1"/>
+<line y1="1471.5" x2="1920" y2="1471.5" stroke="#6366F1"/>
+<line x1="1821.5" y1="384" x2="1821.5" y2="1608" stroke="#6366F1"/>
+<line x1="95.5" y1="384" x2="95.5001" y2="1608" stroke="#6366F1"/>
 <defs>
-<filter id="filter0_f_166_11" x="-408" y="0" width="2736" height="2053" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_166_11" x="-408" y="0" width="2736" height="2023" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="256" result="effect1_foregroundBlur_166_11"/>
@@ -20,7 +19,7 @@
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_166_11" transform="scale(0.000523064 0.000925926)"/>
 </pattern>
-<linearGradient id="paint0_linear_166_11" x1="164" y1="1178.04" x2="1772.63" y2="911.473" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_166_11" x1="164" y1="1158.62" x2="1770.02" y2="884.496" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0500FF"/>
 <stop offset="0.352703" stop-color="#5200FF"/>
 <stop offset="1" stop-color="#F400FF"/>
