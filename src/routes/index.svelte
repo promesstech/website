@@ -156,11 +156,8 @@
         </div>
     </div>
     <div class="w-screen bg-very-dark-secondary bg-opacity-20 flex flex-col items-center">
-        <img
-            src="/images/assets/example3.svg"
-            alt="gradient"
-            class="main-example-image"
-        />
+        <img src="/images/assets/example2.svg" alt="gradient" class="main-example-image xs:hidden"/>
+        <img src="/images/assets/example4.svg" alt="gradient" class="main-example-image hidden xs:flex"/>
     </div>
     <div class="w-screen flex flex-col items-center pt-48 pb-24 px-1/12 text-center">
         <span class="text-5xl font-black md:text-3xl 2xs:text-2xl">Promess brings together all your project management needs into one app </span>
