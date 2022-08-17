@@ -97,24 +97,25 @@
             </div>
             <div class="py-8 px-4 flex flex-col h-full overflow-y-scroll overflow-x-hidden pr-8">
                 <span class="font-bold ml-4 mb-4">User</span>
-                <a class="nav-link {section === "profile" && "active"}" href="/dashboard/profile"><img src="/icons/navbar/profile.svg" alt="profile"/>Profile</a>
-                <a class="nav-link {section === "messages" && "active"}" href="/dashboard/messages"><img src="/icons/navbar/messages.svg" alt="messages"/>Messages</a>
-                <a class="nav-link {section === "friends" && "active"}" href="/dashboard/friends"><img src="/icons/navbar/friends.svg" alt="friends"/>Friends</a>
+                <a class="nav-link {section === "profile" && "active"}" href="/dashboard/profile"><img src="/icons/dashboard/sidebar/profile.svg" alt="profile"/>Profile</a>
+                <a class="nav-link {section === "messages" && "active"}" href="/dashboard/messages"><img src="/icons/dashboard/sidebar/messages.svg" alt="messages"/>Messages</a>
+                <a class="nav-link {section === "friends" && "active"}" href="/dashboard/friends"><img src="/icons/dashboard/sidebar/friends.svg" alt="friends"/>Friends</a>
                 <span class="font-bold m-4 mt-8">Organization</span>
-                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}"><img src="/icons/navbar/home.svg" alt="dashboard"/>Dashboard</a>
-                <a class="nav-link {section === "members" && "active"}" href="/dashboard/organization/{organizationId}/members"><img src="/icons/navbar/members.svg" alt="members"/>Members</a>
-                <a class="nav-link {section === "chats" && "active"}" href="/dashboard/organization/{organizationId}/chats"><img src="/icons/navbar/chats.svg" alt="chats"/>Chats</a>
-                <a class="nav-link {section === "tasks" && "active"}" href="/dashboard/organization/{organizationId}/tasks"><img src="/icons/navbar/task.svg" alt="tasks"/>Tasks</a>
-                <a class="nav-link {section === "calendar" && "active"}" href="/dashboard/organization/{organizationId}/calendar"><img src="/icons/navbar/calendar.svg" alt="calendar"/>Calendar</a>
-                <a class="nav-link {section === "revenue" && "active"}" href="/dashboard/organization/{organizationId}/revenue"><img src="/icons/navbar/revenue.svg" alt="revenue"/>Revenue</a>
-                <a class="nav-link {section === "files" && "active"}" href="/dashboard/organization/{organizationId}/files"><img src="/icons/navbar/file.svg" alt="files"/>Files</a>
-                <a class="nav-link {section === "settings" && "active"}" href="/dashboard/organization/{organizationId}/settings"><img src="/icons/navbar/settings.svg" alt="settings"/>Settings</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}"><img src="/icons/dashboard/sidebar/home.svg" alt="dashboard"/>Dashboard</a>
+                <a class="nav-link {section === "members" && "active"}" href="/dashboard/organization/{organizationId}/members"><img src="/icons/dashboard/sidebar/members.svg" alt="members"/>Members</a>
+                <a class="nav-link {section === "chats" && "active"}" href="/dashboard/organization/{organizationId}/chats"><img src="/icons/dashboard/sidebar/chats.svg" alt="chats"/>Chats</a>
+                <a class="nav-link {section === "tasks" && "active"}" href="/dashboard/organization/{organizationId}/tasks"><img src="/icons/dashboard/sidebar/task.svg" alt="tasks"/>Tasks</a>
+                <a class="nav-link {section === "calendar" && "active"}" href="/dashboard/organization/{organizationId}/calendar"><img src="/icons/dashboard/sidebar/calendar.svg" alt="calendar"/>Calendar</a>
+                <a class="nav-link {section === "revenue" && "active"}" href="/dashboard/organization/{organizationId}/revenue"><img src="/icons/dashboard/sidebar/revenue.svg" alt="revenue"/>Revenue</a>
+                <a class="nav-link {section === "files" && "active"}" href="/dashboard/organization/{organizationId}/files"><img src="/icons/dashboard/sidebar/file.svg" alt="files"/>Files</a>
+                <a class="nav-link {section === "settings" && "active"}" href="/dashboard/organization/{organizationId}/settings"><img src="/icons/dashboard/sidebar/settings.svg" alt="settings"/>Settings</a>
                 <span class="font-bold m-4 mt-8">Tech</span>
-                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/navbar/server.svg" alt="settings"/>Infrastructure</a>
-                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/navbar/metrics.svg" alt="settings"/>Metrics</a>
-                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/navbar/analytics.svg" alt="settings"/>Analytics</a>
-                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/navbar/uptime.svg" alt="settings"/>Uptime</a>
-                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/navbar/logs.svg" alt="settings"/>Logs</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/dashboard/sidebar/server.svg" alt="settings"/>Infrastructure</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/dashboard/sidebar/metrics.svg" alt="settings"/>Metrics</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/dashboard/sidebar/analytics.svg" alt="settings"/>Analytics</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/dashboard/sidebar/uptime.svg" alt="settings"/>Uptime</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/dashboard/sidebar/logs.svg" alt="settings"/>Logs</a>
+                <a class="nav-link {section === "" && "active"}" href="/dashboard/organization/{organizationId}/"><img src="/icons/dashboard/sidebar/database.svg" alt="database"/>Database</a>
             </div>
             <div class="flex flex-row items-center px-4 h-24 border border-solid border-dark-primary border-x-0 border-b-0">
                 <Logo />
