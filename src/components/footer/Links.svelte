@@ -7,13 +7,13 @@
         <span class="link-title">Promess</span>
         <a
             class="link"
-            href="/redirect?link=social-github"
+            href="/newsletter"
         >
             Source code
         </a>
         <a
             class="link"
-            href="/premium"
+            href="/newsletter"
         >
             Pricing
         </a>
@@ -22,19 +22,19 @@
         <span class="link-title">Company</span>
         <a
             class="link"
-            href="/redirect?link=about"
+            href="/newsletter"
         >
             About
         </a>
         <a
             class="link"
-            href="/info/blog"
+            href="/newsletter"
         >
             Blog
         </a>
         <a
             class="link"
-            href="/info/changelog"
+            href="/newsletter"
         >
             Changelog
         </a>
@@ -43,25 +43,25 @@
         <span class="link-title">Support</span>
         <a
             class="link"
-            href="mailto:"
+            href="/newsletter"
         >
             Contact
         </a>
         <a
             class="link"
-            href="mailto:"
+            href="/newsletter"
         >
             Feedback
         </a>
         <a
             class="link"
-            href="/redirect?link=support-server"
+            href="/newsletter"
         >
             Discord server
         </a>
         <a
             class="link"
-            href="/info/reviews"
+            href="/newsletter"
         >
             Reviews
         </a>
@@ -70,25 +70,25 @@
         <span class="link-title">Legal</span>
         <a
             class="link"
-            href="/legal/privacy"
+            href="/newsletter"
         >
             Privacy Policy
         </a>
         <a
             class="link"
-            href="/legal/terms"
+            href="/newsletter"
         >
             Terms of service
         </a>
         <a
             class="link"
-            href="/legal/cookies"
+            href="/newsletter"
         >
             Cookie policy
         </a>
         <a
             class="link"
-            href="/legal/refunds"
+            href="/newsletter"
         >
             Refund Policy
         </a>

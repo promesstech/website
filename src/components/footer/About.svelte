@@ -9,7 +9,7 @@
     <p class="text-secondary my-4 2xs:text-sm xs:px-16">Mission control for your SaaS business</p>
     <a
         class="flex flex-row items-center"
-        href="mailto:"
+        href="/newsletter"
     >
         <img
             src="/icons/footer/email.svg"

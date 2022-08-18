@@ -2,9 +2,10 @@
     export let name: string;
     export let main: boolean = false;
 </script>
+<!-- href="/integrations/{name}" -->
 <a
     class="icon-container {!main ? "xs:hidden" : ""}"
-    href="/integrations/{name}"
+    href="/newsletter"
 >
     <span class="integration-name">{name}</span>
     <slot />

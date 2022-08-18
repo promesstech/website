@@ -110,9 +110,9 @@
             </div>
             <div class="flex flex-row w-full justify-center lg:hidden">
                 <a class="nav-link" href="/dashboard">Dashboard</a>
-                <a class="nav-link" href="/pricing">Pricing</a>
-                <a class="nav-link" href="/">Support</a>
-                <a class="nav-link" href="/">Resources</a>
+                <a class="nav-link" href="/newsletter">Pricing</a>
+                <a class="nav-link" href="/newsletter">Support</a>
+                <a class="nav-link" href="/newsletter">Resources</a>
             </div>
             <div class="login flex flex-row w-96 lg:hidden">
                 <a
@@ -239,7 +239,7 @@
             <span class="text-lg font-bold text-secondary my-12">Promess integrates with various services to bring together data from your favourite external services to display in a clean UI.</span>
             <a  
                 class="font-bold bg-accent rounded-md w-48 text-center py-2"
-                href="/integrations"
+                href="/newsletter"
             >
                 Explore integrations
             </a>
@@ -316,7 +316,10 @@
         <div class="flex flex-col w-1/2 items-center text-center md:w-full md:px-8">
             <span class="font-black text-5xl md:text-4xl">Promess is still in development</span>
             <span class="text-secondary my-8 font-bold">Subscribe to our newsletter to get weekly updates and get notified when we go into beta.</span>
-            <div class="flex flex-row w-5xx 2xs:w-5/6 xs:flex-col">
+            <form
+                class="flex flex-row w-5xx 2xs:w-5/6 xs:flex-col"
+                on:submit|preventDefault={() => { goto("#newsletter") }}
+            >
                 <input
                     placeholder="Your email"
                     type="text"
@@ -330,7 +333,7 @@
                 >
                     Subscribe
                 </a>
-            </div>
+            </form>
         </div>
     </div>
     <div class="mt-16 bg-secondary bg-opacity-10 2xs:mt-8">
