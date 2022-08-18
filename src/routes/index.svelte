@@ -1,3 +1,6 @@
+<svelte:head>
+    <title>Promess</title>
+</svelte:head>
 <script>
     import { onMount } from "svelte";
     import { fade, fly } from "svelte/transition";
