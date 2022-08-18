@@ -1,5 +1,16 @@
+<script context="module">
+    const dev = false // import.meta.env.DEV;
+    export const load = () => {
+        if (!dev) return {
+            status: 301,
+            redirect: "/newsletter",
+        };
+    };
+</script>
+
 <script lang="ts">
     import { onMount, setContext } from "svelte";
+    import { goto } from "$app/navigation";
     import { writable } from "svelte/store";
     import { page } from "$app/stores";
     import { userStore } from "../../stores/user";
@@ -21,7 +32,14 @@
     };
 
     // setContext can't be run inside onMount, so we need to run it later
-    onMount(createWebsocket);
+    onMount(() => {
+        if (!dev) {
+            goto("/newsletter");
+            window.location.reload();
+            return
+        };
+        createWebsocket();
+    });
 
     // but we can't run it right outside as it's undefined while onMount is running
     // so we have to run it when ws changes
@@ -41,8 +59,6 @@
     $: accountsDropdown = false;
 
     $: accounts = [ $userStore ];
-
-    const dev = import.meta.env.DEV;
 </script>
 
 {#if dev}
@@ -128,5 +144,5 @@
         </div>
     </div>
 {:else}
-    <span>Get off the dashboard >:(</span>
+    <span class="w-screen h-screen flex items-center justify-center font-bold text-5xl">Promess is still in development</span>
 {/if}

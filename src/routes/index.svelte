@@ -115,8 +115,18 @@
                 <a class="nav-link" href="/">Resources</a>
             </div>
             <div class="login flex flex-row w-96 lg:hidden">
-                <a class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all" href="/login">Login</a>
-                <a class="bg-accent" href="/signup">Start for free</a>
+                <a
+                    class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all"
+                    href="/accounts/login"
+                >
+                    Login
+                </a>
+                <a
+                    class="bg-accent"
+                    href="/accounts/signup"
+                >
+                    Start for free
+                </a>
             </div>
             <div class="hidden lg:flex flex-row w-full justify-end">
                 <img
@@ -312,10 +322,11 @@
                     type="text"
                     class="rounded-l-md bg-inherit border border-solid border-secondary p-3 border-r-0 font-bold w-full md:py-2 md:text-sm xs:border-r xs:rounded-r-md"
                     id="newsletter"
+                    bind:value={email}
                 />
                 <a
                     class="bg-accent rounded-r-md px-4 font-bold flex items-center justify-center w-48 2xs:text-sm md:w-32 xs:w-full xs:rounded-l-md xs:mt-4 xs:h-8"
-                    href="/newsletter"
+                    href="/newsletter?email={email}"
                 >
                     Subscribe
                 </a>
