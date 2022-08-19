@@ -3,7 +3,7 @@
 </svelte:head>
 <script>
     import { onMount } from "svelte";
-    import { fade, fly } from "svelte/transition";
+    import { fade, fly, slide } from "svelte/transition";
     import { goto } from "$app/navigation";
     import Integration from "../components/Integration.svelte";
     import Logo from "../components/Logo.svelte";
@@ -135,12 +135,44 @@
             description: "Setup monitors for your application and a page to view their status and past downtimes. Receive notifications when there's any problem with your service or application and stay alerted at all times.",
             icon: "uptime",
         },
-    ]
+    ];
 </script>
 
+{#if menuIsActive}
+    <div
+        class="absolute bg-black h-screen w-screen z-50 top-24 hidden lg:flex bg-opacity-90"
+        transition:fade={{ duration: 300 }}
+    >
+        <div
+            class="bg-black w-full h-fit"
+            transition:fly={{ duration: 300, x: 200 }}
+        >
+            <div class="flex flex-col w-full h-full bg-secondary bg-opacity-10 p-8">
+                <a class="nav-link start" href="/dashboard">Dashboard</a>
+                <a class="nav-link start" href="/newsletter">Pricing</a>
+                <a class="nav-link start" href="/newsletter">Support</a>
+                <a class="nav-link start" href="/newsletter">Resources</a>
+                <div class="login mobile flex flex-row w-full pt-8 sm:flex-col">
+                    <a
+                        class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all mr-4 sm:mb-4"
+                        href="/accounts/login"
+                    >
+                        Login
+                    </a>
+                    <a
+                        class="bg-accent ml-4"
+                        href="/accounts/signup"
+                    >
+                        Start for free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{/if}
 <div class="flex flex-col w-full min-h-screen bg-black">
-    <div class="flex flex-col h-screen">
-        <div class="flex flex-row p-8 w-full items-center xs:py-0 xs:pt-4">
+    <div class="flex flex-col h-screen relative">
+        <div class="navbar flex flex-row px-8 w-full h-48 items-center {menuIsActive ? "active" : ""}">
             <div class="w-96 mb-4">
                 <Logo />
             </div>
