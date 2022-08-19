@@ -222,10 +222,10 @@
                     transition:fly={{ duration: 300, x: 200 }}
                 >
                     <div class="flex flex-col w-full h-full bg-secondary bg-opacity-10 p-8">
-                        <a class="nav-link start" href="/dashboard">Dashboard</a>
-                        <a class="nav-link start" href="/newsletter">Pricing</a>
-                        <a class="nav-link start" href="/newsletter">Support</a>
-                        <a class="nav-link start" href="/newsletter">Resources</a>
+                        <a class="nav-link start" href="/dashboard" on:click={toggleMenu}>Dashboard</a>
+                        <a class="nav-link start" href="/newsletter" on:click={toggleMenu}>Pricing</a>
+                        <a class="nav-link start" href="/newsletter" on:click={toggleMenu}>Support</a>
+                        <a class="nav-link start" href="/newsletter" on:click={toggleMenu}>Resources</a>
                         <div class="login mobile flex flex-row w-full pt-8 sm:flex-col">
                             <a
                                 class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all mr-4 sm:mb-4"
