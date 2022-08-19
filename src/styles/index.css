@@ -8,7 +8,7 @@
     @apply flex flex-row items-center justify-center text-gray-400 rounded-md mb-2 py-2 mx-2 w-32 text-center font-bold transition-all hover:bg-secondary hover:bg-opacity-20 hover:text-white text-xl;
 }
 .nav-link.start {
-    @apply justify-start;
+    @apply justify-start pl-2;
 }
 .login a {
     @apply flex items-center justify-center w-36 py-2 h-10 rounded-md font-bold ml-4;
