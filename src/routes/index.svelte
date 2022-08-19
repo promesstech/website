@@ -179,8 +179,8 @@
         </div>
     </div>
 {/if}
-<div class="flex flex-col min-h-screen bg-black">
-    <div class="flex flex-col h-screen relative">
+<div class="flex flex-col min-w-screen bg-black">
+    <div class="flex flex-col h-screen w-full relative">
         <div class="navbar flex flex-row px-8 w-full h-48 items-center {menuIsActive ? "active" : ""}">
             <div class="w-96 mb-4">
                 <Logo />
