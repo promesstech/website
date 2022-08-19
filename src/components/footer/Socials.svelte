@@ -7,7 +7,7 @@
     <div class="flex flex-row">
         <a
             class="social"
-            href="/"
+            href="https://twitter.com/promesstech"
         >
             <img
                 src="/icons/footer/twitter.svg" 
@@ -17,7 +17,7 @@
         </a>
         <a
             class="social"
-            href="/"
+            href="https://github.com/promesstech"
         >
             <img
                 src="/icons/footer/github.svg" 
@@ -37,7 +37,7 @@
         </a>
         <a
             class="social"
-            href="/"
+            href="https://discord.gg/wfVs34DxZS"
         >
             <img
                 src="/icons/footer/discord.svg" 

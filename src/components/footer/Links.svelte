@@ -7,7 +7,7 @@
         <span class="link-title">Promess</span>
         <a
             class="link"
-            href="/newsletter"
+            href="https://github.com/promesstech"
         >
             Source code
         </a>
@@ -43,19 +43,19 @@
         <span class="link-title">Support</span>
         <a
             class="link"
-            href="/newsletter"
+            href="mailto:promesstech@gmail.com"
         >
             Contact
         </a>
         <a
             class="link"
-            href="/newsletter"
+            href="mailto:promesstech@gmail.com"
         >
             Feedback
         </a>
         <a
             class="link"
-            href="/newsletter"
+            href="https://discord.gg/wfVs34DxZS"
         >
             Discord server
         </a>

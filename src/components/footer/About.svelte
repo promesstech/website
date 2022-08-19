@@ -9,14 +9,14 @@
     <p class="text-secondary my-4 2xs:text-sm xs:px-16">Mission control for your SaaS business</p>
     <a
         class="flex flex-row items-center"
-        href="/newsletter"
+        href="mailto:promesstech@gmail.com"
     >
         <img
             src="/icons/footer/email.svg"
             alt="email"
             class="w-5"
         />
-        <span class="ml-2 font-bold">contact@promess.tech</span>
+        <span class="ml-2 font-bold">promesstech@gmail.com</span>
     </a>
     <span class="mt-4 font-bold text-secondary">Dev 0.1.0</span>
 </div>

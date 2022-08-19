@@ -72,19 +72,19 @@
     const features = [
         {
             name: "Tasks",
-            description: "Manage your tasks and assign them to your team members.",
+            description: "Manage your tasks and assign them to your team members. It's all in one place - and your whole team gets notified every time a task is assigned or completed.",
         },
         {
             name: "Members",
-            description: "Manage your tasks and assign them to your team members.",
+            description: "Form a team of members with different roles and permissions and add them to different teams within your organization.",
         },
         {
             name: "Chats",
-            description: "Manage your tasks and assign them to your team members.",
+            description: "Communicate with your team in a 1-to-1 chat, group discussions or brainstorms. Create chats for different topics, with customizable permissions to limit chats to the whole organization or just members of a specific team.",
         },
         {
             name: "Calendar",
-            description: "Manage your tasks and assign them to your team members.",
+            description: "Create events and reminders to plan out a schedule for your organization. View in different time frames and assign to specific members or teams. Add relevant documents to an event to stay organized.",
         },
     ];
 
@@ -103,6 +103,39 @@
             x: document.body.clientWidth > 1100 ? 700 : -200,
         };
     });
+
+    const techFeatures = [
+        {
+            name: "View your infrastructure",
+            description: "Get an overview of your entire tech infrastructure with data taken from Google Cloud, AWS, Azure and more.",
+            icon: "server",
+        },
+        {
+            name: "Track your analytics",
+            description: "Assess the performance of your website and gain data-driven insights to improve it. Identify bottlenecks in the customer journey and find ways to improve conversions.",
+            icon: "analytics",
+        },
+        {
+            name: "Measure your metrics",
+            description: "See inside your tech infrastructure to spot performance issues and identify opportunities to improve your site's performance. Be aware of your resource usage at all times to avoid overusing or under-utilizing your resources, saving money in the process.",
+            icon: "metrics",
+        },
+        {
+            name: "Administer your database",
+            description: "Visualize and manage your MySQL, SQLite, PostgreSQL, MongoDB, Redis and other data sources. Track your data's growth over time to stay on top of your storage and get the most from your database.",
+            icon: "database",
+        },
+        {
+            name: "Manage your logs",
+            description: "Collect logs from your applications to identify possible errors. Query logs to quickly obtain the information you need to troubleshoot a problem and get answers quickly.",
+            icon: "logs",
+        },
+        {
+            name: "Monitor your applications",
+            description: "Setup monitors for your application and a page to view their status and past downtimes. Receive notifications when there's any problem with your service or application and stay alerted at all times.",
+            icon: "uptime",
+        },
+    ]
 </script>
 
 <div class="flex flex-col w-full min-h-screen bg-black">
@@ -281,36 +314,13 @@
             <span class="text-4xl font-bold text-center 2xs:text-3xl">Manage your tech</span>
             <span class="font-bold text-secondary mt-4 text-center 2xs:text-xs">With promess you can administer and monitor the tech side of your business.</span>
             <div class="grid grid-cols-3 w-12xx mt-8 2lg:w-5/6 md:w-full md:grid-cols-2 2xs:grid-cols-1">
-                <div class="tech-feature">
-                    <img src="/icons/features/tech/server.svg" alt="infrastructure" class="icon"/>
-                    <span class="title">View your infrastructure</span>
-                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
-                </div>
-                <div class="tech-feature">
-                    <img src="/icons/features/tech/analytics.svg" alt="analytics" class="icon"/>
-                    <span class="title">Track your analytics</span>
-                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
-                </div>
-                <div class="tech-feature">
-                    <img src="/icons/features/tech/metrics.svg" alt="metrics" class="icon"/>
-                    <span class="title">Measure your metrics</span>
-                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
-                </div>
-                <div class="tech-feature">
-                    <img src="/icons/features/tech/database.svg" alt="database" class="icon"/>
-                    <span class="title">Administer your database</span>
-                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
-                </div>
-                <div class="tech-feature">
-                    <img src="/icons/features/tech/logs.svg" alt="logs" class="icon"/>
-                    <span class="title">Manage your logs</span>
-                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
-                </div>
-                <div class="tech-feature">
-                    <img src="/icons/features/tech/uptime.svg" alt="uptime" class="icon"/>
-                    <span class="title">Monitor your applications</span>
-                    <span class="description">Capture live notes during your sessions - and invite your team to join in. Capture insights individually or collaboratively.</span>
-                </div>
+                {#each techFeatures as techFeature}
+                    <div class="tech-feature">
+                        <img src="/icons/features/tech/{techFeature.icon}.svg" alt="infrastructure" class="icon"/>
+                        <span class="title">{techFeature.name}</span>
+                        <span class="description">{techFeature.description}</span>
+                    </div>
+                {/each}
             </div>
         </div>
         <img src="/images/WaveBottom.svg" alt="wave-bottom" />
