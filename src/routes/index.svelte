@@ -147,38 +147,6 @@
     ];
 </script>
 
-{#if menuIsActive}
-    <div
-        class="absolute bg-black h-screen w-screen z-50 top-24 hidden lg:flex bg-opacity-90"
-        transition:fade={{ duration: 300 }}
-    >
-        <div
-            class="bg-black w-full h-fit"
-            transition:fly={{ duration: 300, x: 200 }}
-        >
-            <div class="flex flex-col w-full h-full bg-secondary bg-opacity-10 p-8">
-                <a class="nav-link start" href="/dashboard">Dashboard</a>
-                <a class="nav-link start" href="/newsletter">Pricing</a>
-                <a class="nav-link start" href="/newsletter">Support</a>
-                <a class="nav-link start" href="/newsletter">Resources</a>
-                <div class="login mobile flex flex-row w-full pt-8 sm:flex-col">
-                    <a
-                        class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all mr-4 sm:mb-4"
-                        href="/accounts/login"
-                    >
-                        Login
-                    </a>
-                    <a
-                        class="bg-accent ml-4"
-                        href="/accounts/signup"
-                    >
-                        Start for free
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-{/if}
 <div class="flex flex-col min-w-screen bg-black">
     <div class="flex flex-col h-screen w-full relative">
         <div class="navbar flex flex-row px-8 w-full h-48 items-center {menuIsActive ? "active" : ""}">
@@ -244,6 +212,38 @@
                 <a href="#newsletter" class="flex items-center justify-center bg-accent font-bold ml-4 rounded-md w-40 sm:w-32 2xs:w-24 2xs:text-xs tiny:w-full tiny:mt-2 tiny:ml-0 tiny:h-8">Sign Up</a>
             </form>
         </div>
+        {#if menuIsActive}
+            <div
+                class="absolute bg-black h-screen w-screen z-50 top-24 hidden lg:flex bg-opacity-90"
+                transition:fade={{ duration: 300 }}
+            >
+                <div
+                    class="bg-black w-full h-fit"
+                    transition:fly={{ duration: 300, x: 200 }}
+                >
+                    <div class="flex flex-col w-full h-full bg-secondary bg-opacity-10 p-8">
+                        <a class="nav-link start" href="/dashboard">Dashboard</a>
+                        <a class="nav-link start" href="/newsletter">Pricing</a>
+                        <a class="nav-link start" href="/newsletter">Support</a>
+                        <a class="nav-link start" href="/newsletter">Resources</a>
+                        <div class="login mobile flex flex-row w-full pt-8 sm:flex-col">
+                            <a
+                                class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all mr-4 sm:mb-4"
+                                href="/accounts/login"
+                            >
+                                Login
+                            </a>
+                            <a
+                                class="bg-accent ml-4"
+                                href="/accounts/signup"
+                            >
+                                Start for free
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {/if}
     </div>
     <div class="w-screen bg-very-dark-secondary bg-opacity-20 flex flex-col items-center">
         <img src="/images/assets/example-desktop.svg" alt="main-example-desktop" class="main-example-image xs:hidden"/>
