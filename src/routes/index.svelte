@@ -92,6 +92,15 @@
 
     $: menuIsActive = false;
 
+    const toggleMenu = () => {
+        menuIsActive = !menuIsActive;
+        if (!document) return;
+        // @ts-ignore
+        document.querySelector("body").classList.toggle("overflow-hidden");
+        // @ts-ignore
+        document.querySelector("html").classList.toggle("overflow-hidden");
+    };
+
     $: featureFlyTransition = {
         duration: 300,
         x: -200,
@@ -170,7 +179,7 @@
         </div>
     </div>
 {/if}
-<div class="flex flex-col w-full min-h-screen bg-black">
+<div class="flex flex-col min-h-screen bg-black">
     <div class="flex flex-col h-screen relative">
         <div class="navbar flex flex-row px-8 w-full h-48 items-center {menuIsActive ? "active" : ""}">
             <div class="w-96 mb-4">
@@ -201,7 +210,7 @@
                     src="/icons/navbar/menu.svg"
                     alt="menu"
                     class="w-8 hover:cursor-pointer"
-                    on:click={() => { menuIsActive = !menuIsActive; }}
+                    on:click={toggleMenu}
                 />
             </div>
         </div>
