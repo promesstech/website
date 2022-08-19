@@ -262,10 +262,11 @@
         <div class="feature-grid grid grid-cols-2 w-1/2 z-10 lg:w-full sm:grid-cols-1 sm:w-screen sm:px-8">
             {#each features as featureElement, i}
             {@const borders = featureBorders[i]}
-                <div
+                <a
                     class="feature {borders}"
                     on:mouseover={() => feature = featureElement.name.toLowerCase()}
                     on:focus={() => feature = featureElement.name.toLowerCase()}
+                    href="/newsletter"
                 >
                     <div class="flex flex-row items-center">
                         <img src="/icons/features/{featureElement.name.toLowerCase()}.svg" alt="icon" class="w-12 h-12"/>
@@ -273,7 +274,7 @@
                     </div>
                     <span class="mt-4 text-secondary text-xs font-bold">{featureElement.description}</span>
                     <span class="mt-4 text-accent font-bold">Discover {featureElement.name} ></span>
-                </div>
+                </a>
             {/each}
         </div>
         {#if feature === "tasks"}
