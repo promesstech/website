@@ -1,3 +1,3 @@
-# project manager website
+# promess
 
-Website for project manager
+Website for Promess
