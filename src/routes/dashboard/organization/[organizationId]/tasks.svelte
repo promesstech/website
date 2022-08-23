@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Member, Task } from "src/types/dashboard";
+    import type { Member, Task } from "promess";
     import { scale, slide } from "svelte/transition";
     import { userStore } from "../../../../stores/user";
     import { organizationStore } from "../../../../stores/organization";
@@ -7,53 +7,8 @@
     import DateInput from "../../../../components/date/DateInput.svelte";
     import Document from "../../../../components/Document.svelte";
 
-    const member: Member = {
-        avatar: $userStore.avatar,
-        email: $userStore.email,
-        id: $userStore.id,
-        name: $userStore.name,
-        role: [ "CTO" ],
-        team: "Development",
-    };
-
-    const tasks: Task[] = [
-        {
-            assignees: [ member ],
-            createdAt: Date.now(),
-            createdBy: member,
-            description: "Fix mobile responsiveness on login page",
-            dueDate: Date.now(),
-            id: "task_1",
-            priority: "low",
-            project: {
-                name: "Project Manager",
-                id: "project_m8fgrvax5eohjwj",
-            },
-            status: "todo",
-            team: {
-                id: "team_m8fgrvax5eohjwj",
-                name: "Development",
-            },
-        },
-        {
-            assignees: [ member ],
-            createdAt: Date.now(),
-            createdBy: member,
-            description: "Update login/signup form validation",
-            dueDate: Date.now(),
-            id: "task_2",
-            priority: "urgent",
-            project: {
-                name: "Project Manager",
-                id: "project_m8fgrvax5eohjwj",
-            },
-            status: "in-progress",
-            team: {
-                id: "team_m8fgrvax5eohjwj",
-                name: "Development",
-            },
-        },
-    ];
+    let member: Member;
+    const tasks: Task[] = [];
 
     let projects: {
         [projectId: string]: {

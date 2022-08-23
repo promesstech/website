@@ -1,16 +1,15 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import { getAllChats } from "../../../../../api/chats";
-    import Loading from "../../../../../components/Loading.svelte";
-    import { chatsStore, setChats } from "../../../../../stores/chats";
+    import { io } from "$lib/utils/ws";
+    import Loading from "$lib/components/Loading.svelte";
+    import { addMessage, chatsStore } from "$lib/stores/chats";
 
     $: loading = Object.values($chatsStore).length === 0;
-
+    
     let { organizationId } = $page.params;
 
-    $: if (loading) getAllChats(organizationId).then(res => {
-        if (res.ok) setChats(res.data);
-        loading = false;
+    io.on("messageCreate", message => {
+        addMessage(message);
     });
 </script>
 

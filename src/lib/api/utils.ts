@@ -13,7 +13,6 @@ export const makeRequest = async (endpoint: string, options?: {
     data?: any;
 }> => {
     const method = options?.method || "GET";
-    // let url = `${constants.api.url}${endpoint}`;
     let url = "http://localhost:50451/v1" + endpoint;
 
     if (options?.query) url += `?${new URLSearchParams(options.query)}`;
@@ -29,7 +28,7 @@ export const makeRequest = async (endpoint: string, options?: {
             body: JSON.stringify(options?.body),
         });
     
-        // if (res.status === 401) window.location.href = `${constants.api.url}/discord/login`;
+        if (res.status === 401) window.location.pathname = "/auth/login";
 
         let json;
 

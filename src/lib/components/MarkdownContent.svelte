@@ -17,7 +17,7 @@
     */
 </script>
 
-<div class="flex flex-row">
+<div class="content flex flex-row">
     <!-- {#each string.split("\n") as line, i}
         <p class="h-6">{line}</p>
     {/each} -->
@@ -29,3 +29,9 @@
         {/if}
     {/each}
 </div>
+
+<style lang="postcss">
+    .content {
+        @apply font-medium text-sm text-gray-200;
+    }
+</style>

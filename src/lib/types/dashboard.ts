@@ -55,6 +55,7 @@ export interface Message {
     channelId: string;
     createdAt: number;
     author: User;
+    partialId?: string;
 };
 
 export interface Task {

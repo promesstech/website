@@ -1,13 +1,13 @@
 <script lang="ts">
-    import type { Message } from "src/types/dashboard";
+    import type { Message, PartialMessage } from "promess";
     import { slide } from "svelte/transition";
     import { page } from "$app/stores";
-    import { addMessage } from "../../stores/chats";
+    import { userStore } from "../../stores/user";
+    import { io } from "../../utils/ws";
     import TextAreaAutoResize from "../TextAreaAutoResize.svelte";
     import ChatMessages from "./ChatMessages.svelte";
-    import { userStore } from "../../stores/user";
     import "../../styles/dashboard/chats.css";
-                    
+                        
     export let messages: Message[] | undefined;
 
     $: content = "";
@@ -15,18 +15,15 @@
     const sendMessage = () => {
         if (!content) return;
         
-        const message: Message = {
-            id: `msg_${Date.now()}`,
-            authorId: "user_zup76x4is0e53a8z",
-            content: content,
-            author: $userStore,
-            channelId: $page.params.channelId,
-            createdAt: Date.now(),
+        const message: PartialMessage = {
+            authorId: $userStore.id,
+            content,
+            chatId: $page.params.channelId,
         };
 
-        content = "";
+        io.emit("messageCreate", message);
 
-        addMessage(message);
+        content = "";
     };
 
     const handleFileUpload = (files: FileList) => {

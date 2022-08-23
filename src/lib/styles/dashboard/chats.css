@@ -4,10 +4,6 @@
 .message:hover .time {
     @apply text-opacity-100;
 }
-.message-container .content {
-    color: #C3C3C3;
-    @apply font-medium text-sm;
-}
 .message-input {
     max-height: 300px;
     resize: none;

@@ -1,8 +1,8 @@
-import type { Organization } from "src/types/dashboard";
+import type { Organization } from "promess";
 import { writable } from "svelte/store";
 
 export const organizationStore = writable<Organization>({
-    id: "org_mc8fgruax5eohjwj",
+    id: "org_hixcdyq9p15pz7e1",
     name: "Promess",
     members: [
         {

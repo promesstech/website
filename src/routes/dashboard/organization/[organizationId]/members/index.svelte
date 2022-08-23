@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { Member } from "src/types/dashboard";
+    import type { Member } from "promess";
     import { fly } from "svelte/transition";
-    import { organizationStore } from "../../../../../stores/organization";
-    import Modal from "../../../../../components/Modal.svelte";
-    import "../../../../../styles/dashboard/members.css";
+    import { organizationStore } from "$lib/stores/organization";
+    import Modal from "$lib/components/Modal.svelte";
+    import "$lib/styles/dashboard/members.css";
 
     const members: Member[] = $organizationStore.members;
 

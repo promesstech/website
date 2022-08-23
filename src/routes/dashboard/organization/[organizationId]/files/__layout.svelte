@@ -1,14 +1,24 @@
 <script lang="ts">
     import { page } from "$app/stores";
-    import "../../../../../styles/dashboard/files.css";
+    import api from "$lib/api";
+    import "$lib/styles/dashboard/files.css";
 
     let { organizationId } = $page.params;
 
     const handleFileUpload = (files: FileList) => {
+        let fileArray = [];
         // @ts-ignore
         for (const file of files) {
-            console.log(file.name);
+            const blob = file.slice(0, file.size, file.type);
+            fileArray.push(new File([blob], file.name, { type: file.type }));
         };
+
+        const formData = new FormData();
+        formData.append("imgfile", fileArray[0]);
+
+        api.files.upload(formData).then(res => {
+            console.log(res);
+        });
     };
 
     let files: FileList;
@@ -25,7 +35,7 @@
             bind:files={files}
             class="hidden"
             id="file-uploader"
-            accept="image/*"
+            accept="image/png, image/jpeg, image/jpg, image/webp"
             multiple
         />
         <div

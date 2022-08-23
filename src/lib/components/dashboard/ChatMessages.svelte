@@ -1,13 +1,10 @@
 <script lang="ts">
-    import type { Message } from "src/types/dashboard";
-    // import { fly, slide } from "svelte/transition";
+    import type { Message } from "promess";
+    import { slide } from "svelte/transition";
     import { formatDate } from "../../utils/dates";
     import MarkdownContent from "../MarkdownContent.svelte";
 
-    export let messages: (Message & {
-        pending?: boolean;
-        error?: string;
-    })[] | undefined;
+    export let messages: Message[] | undefined;
 </script>
 {#if messages && messages.length > 0}
     {#each messages as message, i}
@@ -15,9 +12,9 @@
         {@const newMessageGroup = !previousMessage || previousMessage.authorId !== message.authorId || message.createdAt - previousMessage.createdAt > 1000 * 60 * 30}
         {@const isToday = formatDate(message.createdAt, "yyyy-{MM}-dd") === formatDate(new Date(), "yyyy-{MM}-dd")}
         {@const isNewDay = !previousMessage || message.createdAt - previousMessage.createdAt > 1000 * 60 * 60 * 24}
-        <!-- transition:slide={{ duration: 200 }} -->
         <div
             class="message-container flex flex-col"
+            transition:slide={{ duration: 200 }}
         >
             {#if isNewDay}
                 <div class="date-divider flex flex-row w-full px-8 items-center my-4">
@@ -41,14 +38,18 @@
                                 <span class="font-bold flex flex-col">{message.author?.name || "UNKNOWN USER"}</span>
                                 <span class="text-xs text-secondary font-bold ml-2 mt-1">{isToday ? `Today at ${formatDate(message.createdAt, "hh:mmAPM")}` : formatDate(message.createdAt, "dd/{MM}/yyyy")}</span>
                             </div>
-                            <span class="content"><MarkdownContent string={message.content} /></span>
+                            <span class="content">
+                                <MarkdownContent string={message.content} />
+                            </span>
                         </div>
                     </div>
                 </div>
             {:else}
                 <div class="message flex flex-row">
                     <span class="time flex flex-row justify-end text-opacity-0 text-tiny text-secondary w-24 pr-5">{formatDate(message.createdAt, "hh:mmAPM")}</span>
-                    <span class="content"><MarkdownContent string={message.content} /></span>
+                    <span class="content">
+                        <MarkdownContent string={message.content} />
+                    </span>
                 </div>
             {/if}
         </div>

@@ -1,14 +1,11 @@
-<svelte:head>
-    <title>Promess</title>
-</svelte:head>
 <script>
     import { onMount } from "svelte";
-    import { fade, fly, slide } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
     import { goto } from "$app/navigation";
-    import Integration from "../components/Integration.svelte";
-    import Logo from "../components/Logo.svelte";
-    import Footer from "../components/footer/Footer.svelte";
-    import "../styles/index.css";
+    import Integration from "$lib/components/Integration.svelte";
+    import Logo from "$lib/components/Logo.svelte";
+    import Footer from "$lib/components/footer/Footer.svelte";
+    import "$lib/styles/index.css";
 
     $: email = "";
 
@@ -162,13 +159,13 @@
             <div class="login flex flex-row w-96 lg:hidden">
                 <a
                     class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all"
-                    href="/accounts/login"
+                    href="/auth/login"
                 >
                     Login
                 </a>
                 <a
                     class="bg-accent"
-                    href="/accounts/signup"
+                    href="/auth/signup"
                 >
                     Start for free
                 </a>
@@ -197,7 +194,7 @@
             <form
                 class="flex flex-row mt-24 tiny:flex-col"
                 on:submit|preventDefault={() => {
-                    // goto(`/accounts/signup?email=${email}`);
+                    // goto(`/auth/signup?email=${email}`);
                     // email = "";
                     goto("#newsletter")
                 }}
@@ -208,7 +205,7 @@
                     placeholder="Email address"
                     bind:value={email}
                 />
-                <!-- href="/accounts/signup?email={email}" -->
+                <!-- href="/accoauthunts/signup?email={email}" -->
                 <a href="#newsletter" class="flex items-center justify-center bg-accent font-bold ml-4 rounded-md w-40 sm:w-32 2xs:w-24 2xs:text-xs tiny:w-full tiny:mt-2 tiny:ml-0 tiny:h-8">Sign Up</a>
             </form>
         </div>
@@ -229,13 +226,13 @@
                         <div class="login mobile flex flex-row w-full pt-8 sm:flex-col">
                             <a
                                 class="border-2 border-solid border-accent text-accent hover:bg-accent hover:text-white transition-all mr-4 sm:mb-4"
-                                href="/accounts/login"
+                                href="/auth/login"
                             >
                                 Login
                             </a>
                             <a
                                 class="bg-accent ml-4"
-                                href="/accounts/signup"
+                                href="/auth/signup"
                             >
                                 Start for free
                             </a>
@@ -245,7 +242,7 @@
             </div>
         {/if}
     </div>
-    <div class="w-screen bg-very-dark-secondary bg-opacity-20 flex flex-col items-center">
+    <div class="w-screen bg-secondary bg-opacity-10 flex flex-col items-center">
         <img src="/images/assets/example-desktop.svg" alt="main-example-desktop" class="main-example-image xs:hidden"/>
         <img src="/images/assets/example-mobile.svg" alt="main-example-mobile" class="main-example-image hidden xs:flex"/>
     </div>

@@ -13,12 +13,12 @@
 
     const folders = [
         "Logos",
-        "Icons",
-        "Videos",
-        "Contracts",
-        "Invoices",
-        "Receipts",
-        "Payments",
+        // "Icons",
+        // "Videos",
+        // "Contracts",
+        // "Invoices",
+        // "Receipts",
+        // "Payments",
     ];
 </script>
 <div class="w-full flex flex-col py-16">
