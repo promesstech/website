@@ -6,16 +6,22 @@
     import { parseFormData } from "$lib/utils/core";   
     import api from "$lib/api";
     import { goto } from "$app/navigation";
+    import Spinner from "$lib/components/Spinner.svelte";
 
     const handleLogin = (e: any) => {
+        loading = true;
         const data = parseFormData(e.target);
 
         api.user.login(data).then(res => {
             if (res.status === 200) {
                 goto("/dashboard");
+            } else {
+                loading = false;
             };
         });
     };
+
+    $: loading = false;
 </script>
 
 <form
@@ -35,6 +41,11 @@
         Login with Google
     </a>
     <a href="/auth/signup" class="text-secondary mt-2">Or signup</a>
+    <div class="mt-16 h-16 w-16">
+        {#if loading}
+            <Spinner />
+        {/if}
+    </div>
 </form>
 
 <style lang="postcss">
