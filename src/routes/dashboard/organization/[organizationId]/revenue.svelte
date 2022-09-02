@@ -1,9 +1,9 @@
 <script lang="ts">
-    import { addCommasToNumbers } from "../../../../utils/core";
-    import { formatDate } from "../../../../utils/dates";
-    import Timeseries from "../../../../components/charts/Timeseries.svelte";
-    import Modal from "../../../../components/Modal.svelte";
-    import "../../../../styles/dashboard/revenue.css";
+    import { addCommasToNumbers } from "$lib/utils/core";
+    import { formatDate } from "$lib/utils/dates";
+    import Timeseries from "$lib/components/charts/Timeseries.svelte";
+    import Modal from "$lib/components/Modal.svelte";
+    import "$lib/styles/dashboard/revenue.css";
 
     $: activeKpi = "revenue";
 

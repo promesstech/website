@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Modal from "../../../../../components/Modal.svelte";
-    import DatePicker from "../../../../../components/date/DatePicker.svelte";
-    import Document from "../../../../../components/Document.svelte";
-    import DateInput from "../../../../../components/date/DateInput.svelte";
-    import "../../../../../styles/dashboard/calendar.css";
+    import Modal from "$lib/components/Modal.svelte";
+    import DatePicker from "$lib/components/date/DatePicker.svelte";
+    import Document from "$lib/components/Document.svelte";
+    import DateInput from "$lib/components/date/DateInput.svelte";
+    import "$lib/styles/dashboard/calendar.css";
 
     let activeModal: "reminder" | "event" | "";
     $: activeModal = "";

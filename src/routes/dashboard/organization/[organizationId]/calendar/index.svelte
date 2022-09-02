@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { getWeeksOfMonth, daysOfWeek } from "../../../../../utils/dates";
+    import { getWeeksOfMonth, daysOfWeek } from "$lib/utils/dates";
 
     const today = new Date();
 

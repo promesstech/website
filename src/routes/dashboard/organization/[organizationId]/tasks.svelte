@@ -1,11 +1,10 @@
 <script lang="ts">
     import type { Member, Task } from "promess";
     import { scale, slide } from "svelte/transition";
-    import { userStore } from "../../../../stores/user";
-    import { organizationStore } from "../../../../stores/organization";
-    import { formatDate } from "../../../../utils/dates";
-    import DateInput from "../../../../components/date/DateInput.svelte";
-    import Document from "../../../../components/Document.svelte";
+    import { organizationStore } from "$lib/stores/organization";
+    import { formatDate } from "$lib/utils/dates";
+    import DateInput from "$lib/components/date/DateInput.svelte";
+    import Document from "$lib/components/Document.svelte";
 
     let member: Member;
     const tasks: Task[] = [];

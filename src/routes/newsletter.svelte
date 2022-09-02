@@ -3,7 +3,7 @@
 </svelte:head>
 <script>
     import { page } from "$app/stores";
-    import Logo from "../components/Logo.svelte";
+    import Logo from "$lib/components/Logo.svelte";
 </script>
 
 
